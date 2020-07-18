@@ -630,7 +630,7 @@ a.bl_card:hover .bl_card_txt {
 }
 
 .ly_header_inner {
-  max-width: 810px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -736,7 +736,7 @@ a.bl_card:hover .bl_card_txt {
 
 .ly_firstViewBtn {
   position: relative;
-  max-width: 830px;
+  max-width: 1220px;
   height: 22.5px;
   margin: 0 auto;
   margin: 0 auto;
@@ -772,12 +772,12 @@ a.bl_card:hover .bl_card_txt {
 }
 
 .ly_container.ly_container__noPaddingContents {
-  max-width: 810px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .ly_container.ly_container__paddingContents {
-  max-width: 830px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 30px 10px;
 }
@@ -1501,4 +1501,3 @@ main > section.ly_container:last-child {
     min-height: 165px;
   }
 }
-/*# sourceMappingURL=style.css.map */
