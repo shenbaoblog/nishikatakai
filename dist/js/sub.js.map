@@ -1,0 +1,1 @@
+{"version":3,"sources":["sub.js"],"names":["hello","alert"],"mappings":";;;;;;;AAAO,SAASA,KAAT,GAAiB;AACtBC,EAAAA,KAAK,CAAC,uBAAD,CAAL;AACD","sourcesContent":["export function hello() {\n  alert('helloメソッドが実行された。本当です。');\n}\n"],"file":"sub.js"}

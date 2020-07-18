@@ -1,0 +1,83 @@
+.el_btn {
+  display: inline-block;
+
+// width: 300px;
+  max-width: 100%;
+  padding: 10px 25px;
+  border: 2px solid transparent;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  background-color: $cRed;
+  color: $cWhite;
+  font-size: .875rem;
+  text-decoration: none;
+  text-align: center;
+  transition: $transition;
+
+  &:focus,
+  &:hover {
+    border-color: currentColor;
+    background-color: $cWhite;
+    color: $cRed;
+  }
+}
+
+// ラージボタン
+.el_btn.el_btn__large {
+  width: 200px;
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+}
+
+// 色違い
+.el_btn.el_btn__brown {
+  background-color: $cBrown;
+  color: $cWhite;
+  &:focus,
+  &:hover {
+    border-color: $cBrown;
+    background-color: $cWhite;
+    color: $cBrown;
+  }
+}
+
+// 枠線太い
+.el_btn.el_btn__bdThick {
+  padding: calc(10px - 3px) calc(25px - 3px);
+  border: calc(2px + 3px) solid $cRed;
+  background-color: $cWhite;
+  color: $cRed;
+  &:focus,
+  &:hover {
+    // border-color: currentColor;
+    background-color: $cRed;
+    color: $cWhite;
+  }
+}
+
+
+// 水平ボタン
+.bl_horizBtnList {
+  display: flex;
+  justify-content: center;
+  &_wrapper {
+    // margin: 0 auto;
+    // text-align: center;
+    // display: flex;
+    // justify-content: center;
+  }
+  > *:last-child {
+    margin-right: 0;
+  }
+  > li {
+    flex: 1 1 100%;
+    max-width: 200px;
+    margin-right: 20px;
+  }
+  .el_btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}

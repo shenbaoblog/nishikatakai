@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%# ##_headを読み込み## %>
+<%- include('./_head.ejs', {CONFIG: config["cast"]}); %>
+
+<body>
+  <!-- content -->
+  <div id="content">
+    <div class="inner">
+
+      <%# ----------------_headerを読み込む---------------- %>
+      <%- include('./_header.ejs') %>
+
+      <%# ----------------_navを読み込む---------------- %>
+      <%- include('./_nav.ejs') %>
+
+      <%# ----------------_mainを読み込む---------------- %>
+      <%- include('./_main.ejs') %>
+
+      <%# ----------------_articleを読み込む---------------- %>
+      <%- include('./_article.ejs') %>
+
+      <%# ----------------_asideを読み込む---------------- %>
+      <%- include('./_aside.ejs') %>
+
+      <%# ----------------_footerを読み込む---------------- %>
+      <%- include('./_footer.ejs') %>
+
+    </div><!-- /inner -->
+  </div><!-- /content -->
+</body>
+
+</html>

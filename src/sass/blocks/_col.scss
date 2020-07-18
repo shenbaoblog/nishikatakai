@@ -1,0 +1,118 @@
+// カラム変更準備
+.bl_colUnit {
+  display: flex;
+  flex-wrap: wrap;
+  > .bl_colItem {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+// 2カラム
+$sp_col2_marginBottom: -20px;
+.bl_colUnit {
+  &.bl_colUnit__col2 {
+    margin-bottom: $sp_col2_marginBottom;
+  }
+  &__col2 {
+    > .bl_colItem {
+      margin-bottom: abs($sp_col2_marginBottom);
+    }
+  }
+}
+$tab_col2_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col2 {
+      margin-bottom: $tab_col2_marginBottom;
+    }
+    &__col2 {
+      > .bl_colItem {
+        width: 48.78049%;
+        margin-right: 2.43902%;
+        margin-bottom: abs($tab_col2_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// 3カラム
+$sp_col3_marginBottom: -20px;
+.bl_colUnit {
+  &.bl_colUnit__col3 {
+    margin-bottom: $sp_col3_marginBottom;
+  }
+  &__col3 {
+    > .bl_colItem {
+      margin-bottom: abs($sp_col3_marginBottom);
+    }
+  }
+}
+$tab_col3_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col3 {
+      margin-bottom: $tab_col3_marginBottom;
+    }
+    &__col3 {
+      > .bl_colItem {
+        width: 31.707%;
+        margin-right: 2.43902%;
+        margin-bottom: abs($tab_col3_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// 3カラム（4番目、5番目を2カラム）：拡張パターン
+@include mq("tab") {
+  .bl_colUnit.bl_colUnit__col3.bl_colUnit__col3__col2 {
+    > .bl_colItem:nth-child(4),
+    > .bl_colItem:nth-child(5) {
+      width: 48.78049%;
+    }
+    > .bl_colItem:nth-child(5) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// 4カラム
+$sp_col4_marginBottom: -20px;
+.bl_colUnit {
+  &.bl_colUnit__col4 {
+    margin-bottom: $sp_col4_marginBottom;
+  }
+  &__col4 {
+    > .bl_colItem {
+      margin-bottom: abs($sp_col4_marginBottom);
+    }
+  }
+}
+$tab_col4_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col4 {
+      margin-bottom: $tab_col4_marginBottom;
+    }
+    &__col4 {
+      > .bl_colItem {
+        width: 23.78%;
+        margin-right: 1.62602%;
+        margin-bottom: abs($tab_col4_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

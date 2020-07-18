@@ -1,0 +1,38 @@
+// レイアウト幅
+$layoutTabWidth: 768px;
+$layoutPcWidth: 992px;
+// ブレークポイント
+$breakpoints: (
+  "tab": "screen and (min-width: #{$layoutTabWidth})",
+  "pc": "screen and (min-width: #{$layoutPcWidth})",
+);
+// メディアクエリー
+@mixin mq($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// コンテナ
+$contentsPaddingHeight: 30px;
+$contentsPaddingWidth: 10px;
+$contentsWidth: 810px + ($contentsPaddingWidth * 2);
+
+// フォントサイズ
+$fontXxl: 2.125rem; //34px
+$fontXl: 1.375rem;  //22px
+$fontLg: 1.125rem; //18px
+$fontMd: 1rem; //16px
+$fontSm: .875rem; //14px
+$fontXs: .75rem; //12px
+
+// カラー
+$cWhite: #fff;
+$cBlack: #333;
+$cBrown: #421f15;
+$cRed: #c63205;
+$cOpacityWhite: rgba(255, 255, 255, .3);
+
+// transition
+$transitionOpacity: .8;
+$transition: .3s;
