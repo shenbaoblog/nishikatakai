@@ -2,3 +2,10 @@
 .hp_bgOpacityWhite {
   background-color: rgba(255, 255, 255, .3)!important;
 }
+
+// spでのみ存在
+@include mq("tab") {
+  .hp_spExist {
+    display: none !important;
+  }
+}

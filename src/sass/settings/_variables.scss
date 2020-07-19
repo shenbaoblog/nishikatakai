@@ -19,12 +19,15 @@ $contentsPaddingWidth: 10px;
 $contentsWidth: 1200px + ($contentsPaddingWidth * 2);
 
 // フォントサイズ
-$fontXxl: 2.125rem; //34px
+$fontXxl: 1.5rem; //24px
 $fontXl: 1.375rem;  //22px
 $fontLg: 1.125rem; //18px
 $fontMd: 1rem; //16px
 $fontSm: .875rem; //14px
 $fontXs: .75rem; //12px
+
+// タブレット時のフォントサイズ
+$fontXxl_tab: 3rem; //48px
 
 // カラー
 $cWhite: #fff;
