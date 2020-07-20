@@ -3,6 +3,14 @@
   background-color: rgba(255, 255, 255, .3)!important;
 }
 
+.hp_cRed {
+  color: $cRed !important;
+}
+
+.hp_bold {
+  font-weight: bold !important;
+}
+
 // spでのみ存在
 @include mq("tab") {
   .hp_spExist {

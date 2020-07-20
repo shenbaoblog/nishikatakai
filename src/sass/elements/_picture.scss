@@ -1,0 +1,49 @@
+.el_picture56 {
+  position: relative;
+  padding-top: 56.07235%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+.el_picture60 {
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+.el_picture100 {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}

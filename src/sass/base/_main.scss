@@ -1,4 +1,12 @@
 // -------------------------------
+// クリアフィックス
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+// -------------------------------
 // 背景画像：標準
 .ly_bgImg {
   background-position: top center;
@@ -157,13 +165,15 @@ main {
     }
     &_icons {
       flex-direction: column;
+      flex-wrap: nowrap;
       justify-content: space-between;
-      margin-bottom: initial;
+      margin-bottom: 0;
     }
     &_icon {
+      // flex-basis: auto;
       width: auto;
-      margin-right: initial;
-      margin-bottom: initial;
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -248,17 +258,20 @@ main {
 // -------------------------------
 // 症状
 .bl_symptoms {
-  text-align: center;
+  // text-align: center;
   &_figure {
     // margin-bottom: 10px;
     overflow: hidden;
     border-radius: 50%;
   }
+  &_txt {
+    text-align: center;
+  }
 }
 
 
 // -------------------------------
-// 治療（まずは、一度お電話ください
+// 治療（まずは、一度お電話ください）
 .bl_treatment {
   &_pictures {
     display: flex;
@@ -267,7 +280,6 @@ main {
   &_picture {
     width: 48.78049%;
     margin-right: 2.43902%;
-    text-align: center;
     &:last-child {
       margin-right: 0;
     }
@@ -293,12 +305,101 @@ main {
   }
 }
 
+// -------------------------------
+// 当院の特徴/施術の流れ
+.bl_wraparound {
+  margin-bottom: 20px;
+  &_imgWrapper {
+    float: left;
+    width: 31.707%;
+    margin-right: 2.43902%;
+  }
+  &_txt {
+    // font-size: 16px;
+  }
+}
 
 // -------------------------------
 // 料金
 .bl_fee {
   border: 1px solid #000;
 }
+
+
+
+
+// -------------------------------
+// よくいただくご質問（アコーディオン）
+.bl_accordion {
+  position: relative;
+  width: 100%;
+
+// border: 1px solid #0079c1;
+  border-top: none;
+  border-bottom: 1px solid #c4c4c4;
+  outline: 0;
+  cursor: pointer;
+
+  .bl_accordion_title {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 20px 40px 20px 20px;
+    border-top: 1px solid #c4c4c4;
+    font-size: 1.25em;
+    font-weight: normal;
+    cursor: pointer;
+    transition: $transition;
+
+    &:last-of-type {
+      // border-bottom: 1px solid #c4c4c4;
+    }
+    &:hover,
+    &:active {
+      background-color: $cOrange;
+      color: $cWhite;
+      &::after {
+        border-color: $cWhite;
+      }
+    }
+  }
+}
+// .bl_accordion .bl_accordion_title:hover i:before,
+// .bl_accordion .bl_accordion_title:hover i:active {
+//   color: white;
+// }
+.bl_accordion_title {
+  position: relative;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 38%;
+    right: 25px;
+    transform: rotate(135deg);
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px $cBlack;
+    border-right: solid 2px $cBlack;
+    content: "";
+    transition: all .2s ease-in-out;
+  }
+  &.open:after {
+    top: 45%;
+    transform: rotate(-45deg);
+  }
+}
+.bl_accordion_content {
+  display: none;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  padding: 20px;
+  background-color: #c4c4c4;
+}
+
+
+
+
+
 
 
 // -------------------------------
