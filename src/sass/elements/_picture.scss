@@ -1,3 +1,38 @@
+.el_picture10 {
+  position: relative;
+  padding-top: 10%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+
+.el_picture43 {
+  position: relative;
+  padding-top: 43%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
 .el_picture56 {
   position: relative;
   padding-top: 56.07235%;
@@ -18,6 +53,23 @@
 .el_picture60 {
   position: relative;
   padding-top: 60%;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    font-family: "object-fit: cover;";
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+.el_picture72 {
+  position: relative;
+  padding-top: 72%;
   overflow: hidden;
   > img {
     position: absolute;
