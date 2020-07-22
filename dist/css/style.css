@@ -882,7 +882,7 @@ a.bl_card:hover .bl_card_txt {
 }
 
 .ly_container {
-  padding: 30px 0;
+  padding: 60px 0;
 }
 
 .ly_container.ly_container__noPaddingContents {
@@ -893,7 +893,7 @@ a.bl_card:hover .bl_card_txt {
 .ly_container.ly_container__paddingContents {
   max-width: 1220px;
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 60px 10px;
 }
 
 main > section.ly_container:last-child {
@@ -1005,12 +1005,34 @@ main > section.ly_container:last-child {
   margin-right: 0;
 }
 
+.bl_profile_name {
+  text-align: center;
+}
+
+.bl_profile_status {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bl_block_ttl {
+  font-weight: bold;
+}
+
+.bl_symptoms_block {
+  margin-bottom: 20px;
+}
+
+.bl_symptoms_block:last-of-type {
+  margin-bottom: 0;
+}
+
 .bl_symptoms_figure {
   overflow: hidden;
   border-radius: 50%;
 }
 
 .bl_symptoms_txt {
+  font-weight: bold;
   text-align: center;
 }
 
@@ -1557,8 +1579,8 @@ main > section.ly_container:last-child {
 }
 
 .ly_footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #333;
 }
 
@@ -1691,6 +1713,12 @@ main > section.ly_container:last-child {
   .bl_recommendVoice_imgWrapper {
     min-width: 31.707%;
     margin-right: 2.43902%;
+  }
+  .bl_symptoms_block {
+    margin-bottom: 40px;
+  }
+  .bl_symptoms_block:last-of-type {
+    margin-bottom: 0;
   }
   .bl_treatment {
     display: -webkit-box;
@@ -1869,4 +1897,3 @@ main > section.ly_container:last-child {
     display: none !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

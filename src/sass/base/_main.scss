@@ -180,11 +180,21 @@ main {
 }
 
 
-
+// -------------------------------
+// プロフィール（スタッフ紹介）
+.bl_profile {
+  &_name {
+    text-align: center;
+  }
+  &_status {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
 
 // -------------------------------
 // 同じ志を持つ仲間からの数え切れない推薦の声
-@include mq(tab) {
+@include mq("tab") {
   .bl_recommendVoice {
     display: flex;
     &_imgWrapper {
@@ -197,8 +207,23 @@ main {
 
 
 // -------------------------------
+// 説明Block
+.bl_block {
+  &_ttl {
+    font-weight: bold;
+  }
+}
+
+
+// -------------------------------
 // 症状
 .bl_symptoms {
+  &_block {
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
   // text-align: center;
   &_figure {
     // margin-bottom: 10px;
@@ -206,7 +231,21 @@ main {
     border-radius: 50%;
   }
   &_txt {
+    font-weight: bold;
     text-align: center;
+  }
+}
+@include mq("tab") {
+  .bl_symptoms {
+    &_block {
+      margin-bottom: 40px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &_txt {
+      // font-size: 1rem;
+    }
   }
 }
 
@@ -226,7 +265,7 @@ main {
     }
   }
 }
-@include mq(tab) {
+@include mq("tab") {
   .bl_treatment {
     display: flex;
     &_pictures {
