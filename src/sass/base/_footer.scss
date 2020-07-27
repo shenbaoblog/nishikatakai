@@ -1,12 +1,13 @@
 // フッター
 .ly_footer {
-  padding-top: $contentsPaddingHeight;
-  padding-bottom: $contentsPaddingHeight;
+  padding-top: $contentsPaddingHeight_tab;
+  padding-bottom: $contentsPaddingHeight_tab;
   background-color: $cBlack;
 }
 .el_footerCopyright {
   display: block;
   color: $cWhite;
-  font-size: $fontXs;
+
+// font-size: $fontXs_sp;
   text-align: center;
 }

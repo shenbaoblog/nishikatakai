@@ -10,7 +10,7 @@
 
 // -------------------------------
 // SP2カラムPC3カラム
-$sp_col23_marginBottom: -10px;
+$sp_col23_marginBottom: -20px;
 .bl_colUnit {
   &.bl_colUnit__col23 {
     margin-bottom: $sp_col23_marginBottom;
@@ -248,6 +248,46 @@ $sp_col4_marginBottom: -20px;
 //     }
 //   }
 // }
+
+
+// 24カラム
+$sp_col24_marginBottom: -20px;
+.bl_colUnit {
+  &.bl_colUnit__col24 {
+    margin-bottom: $sp_col24_marginBottom;
+  }
+  &__col24 {
+    > .bl_colItem {
+      width: 48.78049%;
+      margin-right: 2.43902%;
+      margin-bottom: abs($sp_col24_marginBottom);
+    }
+    > .bl_colItem:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+}
+$tab_col24_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col24 {
+      margin-bottom: $tab_col24_marginBottom;
+    }
+    &__col24 {
+      > .bl_colItem {
+        width: 23.78%;
+        margin-right: 1.62602%;
+        margin-bottom: abs($tab_col24_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 1.62602%;
+      }
+      > .bl_colItem:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 
 // -------------------------------

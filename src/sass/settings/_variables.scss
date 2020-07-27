@@ -1,6 +1,7 @@
 // レイアウト幅
 $layoutTabWidth: 768px;
 $layoutPcWidth: 992px;
+// $layoutPcWidth: 1024px;
 // ブレークポイント
 $breakpoints: (
   "tab": "screen and (min-width: #{$layoutTabWidth})",
@@ -13,21 +14,28 @@ $breakpoints: (
   }
 }
 
-// コンテナ
-$contentsPaddingHeight: 60px;
-$contentsPaddingWidth: 10px;
-$contentsWidth: 1200px + ($contentsPaddingWidth * 2);
+// コンテナ（SP）
+$contentsPaddingHeight_sp: 30px;
+$contentsPaddingWidth_sp: 10px;
+$contentsWidth_sp: 1200px + ($contentsPaddingWidth_sp * 2);
 
-// フォントサイズ
-$fontXxl: 1.5rem; //24px
-$fontXl: 1.375rem;  //22px
-$fontLg: 1.125rem; //18px
-$fontMd: 1rem; //16px
-$fontSm: .875rem; //14px
-$fontXs: .75rem; //12px
+// コンテナ（TAB）
+$contentsPaddingHeight_tab: 60px;
+$contentsPaddingWidth_tab: 10px;
+$contentsWidth_tab: 1200px + ($contentsPaddingWidth_tab * 2);
 
-// タブレット時のフォントサイズ
+// フォントサイズ（SP）
+$fontXxl_sp: 1.5rem; //24px
+$fontXl_sp: 1.125rem;  //18px
+$fontLg_sp: 1rem; //16px
+$fontMd_sp: .875rem; //14px
+
+
+// フォントサイズ（TAB）
 $fontXxl_tab: 3rem; //48px
+$fontXl_tab: 1.875rem;  //30px
+$fontLg_tab: 1.25rem; //20px
+$fontMd_tab: 1rem; //16px
 
 // カラー
 $cWhite: #fff;
