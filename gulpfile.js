@@ -31,15 +31,19 @@ const autoprefixer = require("autoprefixer");
 //gridのベンダープレフィックス取り付けをONにする（デフォルトはOFF）
 const autoprefixerOption = {
   grid: true,
+  grid: "autoplace",
 };
 //flexboxのブラウザ間の細かい挙動誤差修正（IE10/11対応）
 const flexBugsFixes = require("postcss-flexbugs-fixes");
+// font-familyにのobject-fitを自動追加
+const objectFitImages = require("postcss-object-fit-images");
 //postcss関数に渡される用（配列に変換している）
 const postcssOption = [
   //flexboxのブラウザ間の細かい挙動誤差修正（IE10/11対応）をオブジェクトに渡している
   flexBugsFixes,
-  //gridベンダープレフィックスON設定をオブジェクトに渡している
+  //gridベンダープレフィックスON設定,fontfamilyにをオブジェクトに渡している
   autoprefixer(autoprefixerOption),
+  objectFitImages,
 ];
 //CSSのプロパティの並び順をソートして整理してくれる
 const cssdeclsort = require("css-declaration-sorter");

@@ -1,9 +1,10 @@
 // フッター
 .ly_footer {
-  padding-top: $contentsPaddingHeight_tab;
-  padding-bottom: $contentsPaddingHeight_tab;
+  padding-top: $contentsPaddingHeight_sp;
+  padding-bottom: $contentsPaddingHeight_sp;
   background-color: $cBlack;
 }
+
 .el_footerCopyright {
   display: block;
   color: $cWhite;

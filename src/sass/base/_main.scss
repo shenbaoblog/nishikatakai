@@ -89,9 +89,10 @@ main {
   }
   // メイン部
   &_mainGroup {
+    flex-grow: 1;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, .425);
+    background-color: rgba(255, 255, 255, .6);
   }
   &_ttl {
     margin-bottom: 10px;
@@ -113,8 +114,8 @@ main {
     width: 31.707%;
     margin-right: 2.43902%;
     overflow: hidden;
-    border-radius: 50%;
-    background-color: #fff;
+    // border-radius: 50%;
+    // background-color: #fff;
 
     &:nth-of-type(3n),
     &:last-of-type {
@@ -125,9 +126,6 @@ main {
   &_profileImg {
     height: 100%;
 
-// border-radius: 50%;
-    font-family: "object-fit: cover;";
-
     object-fit: cover;
     object-position: center center;
   }
@@ -135,8 +133,8 @@ main {
     width: 85%;
     margin: 0 auto;
     padding: 10px;
-    box-shadow: 0 0 2px #333;
-    background-color: rgba(255, 255, 255, .459);
+    box-shadow: $cBoxShadow;
+    background-color: rgba(255, 255, 255, .6);
   }
   &_qualifications {
     display: flex;
@@ -153,6 +151,9 @@ main {
       margin-right: 0;
     }
   }
+  &_qualificationTtl {
+    line-height: 1;
+  }
   &_icons {
     display: flex;
     flex-wrap: wrap;
@@ -164,7 +165,8 @@ main {
     margin-right: 2.43902%;
     margin-bottom: abs($tab_fvIcon_marginBottom);
     overflow: hidden;
-    border-radius: 5%;
+    border-radius: $border-radius;
+    box-shadow: $cBoxShadow;
     background-color: #fff;
     &:nth-of-type(3n),
     &:last-of-type {
@@ -280,7 +282,7 @@ main {
 
 // -------------------------------
 // 説明Block
-.bl_block {
+.bl_group1 {
   &_ttlWrapper {
     // display: flex;
     // align-items: flex-end;
@@ -295,7 +297,7 @@ main {
   }
 }
 @include mq("tab") {
-  .bl_block {
+  .bl_group1 {
     &_ttlWrapper {
       // height: 60px;
     }
@@ -414,14 +416,66 @@ main {
     }
   }
 }
+
 // -------------------------------
 // 料金
 .bl_fee {
-  border: 1px solid #000;
+  padding: 10px;
+
+// border: 1px solid #000;
+  border-radius: $border-radius;
+  box-shadow: $cBoxShadow;
+
+  &_outer {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &_ttl,
+  &_subTtl {
+    font-weight: bold;
+  }
+  &_ttl {
+    margin-bottom: 10px;
+    color: $cRed;
+    font-size: $fontXl_sp;
+  }
+  &_subTtl {
+    font-size: $fontLg_sp;
+  }
+  &_txt {
+    margin-bottom: 30px;
+  }
+}
+@include mq("tab") {
+  .bl_fee {
+    &_ttl {
+      font-size: $fontXl_tab;
+    }
+    &_subTtl {
+      font-size: $fontLg_tab;
+    }
+  }
 }
 
-
-
+// -------------------------------
+// Google Map
+.bl_googleMap_wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 60%; /* 縦横比の指定 */
+  overflow: hidden;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 // -------------------------------
 // よくいただくご質問（アコーディオン）
@@ -440,17 +494,16 @@ main {
     position: relative;
     margin: 0;
     padding: 20px 40px 20px 20px;
-    border-top: 1px solid #c4c4c4;
+    border-top: 1px solid $cGrey;
     font-size: 1.25em;
     font-weight: normal;
     cursor: pointer;
     transition: $transition;
 
     &:last-of-type {
-      // border-bottom: 1px solid #c4c4c4;
+      // border-bottom: 1px solid $cGrey;
     }
-    &:hover,
-    &:active {
+    &:hover {
       background-color: $cOrange;
       color: $cWhite;
       &::after {
@@ -459,10 +512,7 @@ main {
     }
   }
 }
-// .bl_accordion .bl_accordion_title:hover i:before,
-// .bl_accordion .bl_accordion_title:hover i:active {
-//   color: white;
-// }
+
 .bl_accordion_title {
   position: relative;
   &::after {
@@ -488,9 +538,89 @@ main {
   margin-bottom: 20px;
   margin-left: 40px;
   padding: 20px;
-  background-color: #c4c4c4;
+  background-color: $cBgGrey;
+}
+
+
+// -------------------------------
+// トップページへ戻る
+.bl_toTop {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 15px;
+  bottom: 84px;
+  transform: translateY(20px);
+  transition: $transition;
+  &_chevron {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border: 4px solid $cOrange;
+    background-color: $cWhite;
+    transition: $transition;
+    &::before {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: rotate(135deg);
+      width: 12px;
+      height: 12px;
+      margin: auto;
+      border: 4px solid $cOrange;
+      border-top: none;
+      border-right: none;
+      content: "";
+      transition: $transition;
+    }
+    &:hover {
+      background-color: $cOrange;
+      &::before {
+        border-color: $cWhite;
+      }
+    }
+  }
+  &.js_visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@include mq("tab") {
+  .bl_toTop {
+    right: 20px;
+    bottom: 20px;
+    &_chevron {
+      width: 64px;
+      height: 64px;
+      &::before {
+        top: 12px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
 
 
 
-
+// -------------------------------
+// 接骨院情報
+.bl_info {
+  margin-top: 20px;
+  &_txtWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &_ttl {
+    flex-shrink: 0;
+    width: 5.5em;
+    font-weight: bold;
+  }
+  &_description {
+    text-indent: -1em;
+  }
+}

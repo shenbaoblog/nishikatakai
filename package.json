@@ -93,6 +93,7 @@
     "node-twitter": "^0.5.3",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-object-fit-images": "^1.1.2",
     "prettier": "^1.18.2",
     "regenerator-runtime": "^0.13.5",
     "sass-loader": "^8.0.2",
@@ -113,7 +114,9 @@
     "intersection-observer": "^0.10.0",
     "jquery": "^3.4.1",
     "lodash-es": "^4.17.15",
+    "object-fit-images": "^3.2.4",
     "slick-carousel": "^1.8.1",
+    "stickyfilljs": "^2.1.0",
     "whatwg-fetch": "^3.0.0"
   }
 }

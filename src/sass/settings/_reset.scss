@@ -200,7 +200,7 @@ body,
 textarea,
 input {
   color: $cBlack;
-  font-family: "Hiragino Kaku Gothic ProN","Meiryo", sans-serif;
+  font-family: "Noto Sans JP Compressed","Hiragino Kaku Gothic ProN","Meiryo", sans-serif;
   line-height: 1.5;
 }
 
@@ -208,7 +208,8 @@ a {
   color: #0069ff;
 }
 
-img {
+img,
+svg {
   // min-width: 100%;
   width: 100%;
   vertical-align: top;
@@ -219,10 +220,27 @@ body {
   min-height: 100vh;
 }
 
-// a {
-//   transition: $transition;
-//   &:hover,
-//   &:focus {
-//     opacity: $transitionOpacity;
-//   }
+@font-face {
+  font-family: "Noto Sans JP Compressed";
+  font-weight: 400;
+  font-style: normal;
+
+  src: url("../font/NotoSansJP-Regular.woff") format("woff");
+}
+
+/* 他のサイズを追加する場合も同様に */
+@font-face {
+  font-family: "Noto Sans JP Compressed";
+  font-weight: 700;
+  font-style: normal;
+
+  src: url("../font/NotoSansJP-Bold.woff") format("woff");
+}
+
+// @font-face {
+//   font-family: "Noto Sans JP Compressed";
+//   font-weight: 900;
+//   font-style: normal;
+
+//   src: url("../font/NotoSansJP-Black.woff") format("woff");
 // }

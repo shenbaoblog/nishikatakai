@@ -29,6 +29,7 @@ $fontXxl_sp: 1.5rem; //24px
 $fontXl_sp: 1.125rem;  //18px
 $fontLg_sp: 1rem; //16px
 $fontMd_sp: .875rem; //14px
+$fontSm_sp: .75rem; //12px
 
 
 // フォントサイズ（TAB）
@@ -36,15 +37,25 @@ $fontXxl_tab: 3rem; //48px
 $fontXl_tab: 1.875rem;  //30px
 $fontLg_tab: 1.25rem; //20px
 $fontMd_tab: 1rem; //16px
+$fontSm_tab: .875rem; //14px
 
 // カラー
 $cWhite: #fff;
+$cGrey: #c4c4c4;
+$cBgGrey: #f8f8f8;
 $cBlack: #333;
 $cBrown: #421f15;
 $cRed: #f00;
 $cOrange: #ff993c;
 $cOpacityWhite: rgba(255, 255, 255, .3);
 
+// 影
+$cBoxShadow: 0 0 5px $cGrey;
+$cHeaderBoxShadow: 0 8px 8px -8px rgba(63, 45, 45, .637);
+
 // transition
 $transitionOpacity: .8;
 $transition: .3s;
+
+// border-radius
+$border-radius: 5px;

@@ -250,7 +250,7 @@ $sp_col4_marginBottom: -20px;
 // }
 
 
-// 24カラム
+// sp2,tab4カラム
 $sp_col24_marginBottom: -20px;
 .bl_colUnit {
   &.bl_colUnit__col24 {
@@ -291,8 +291,8 @@ $tab_col24_marginBottom: -30px;
 
 
 // -------------------------------
-// スマホ2カラムPC1カラム：増殖あり
-$sp_cols21_marginBottom: -10px;
+// sp2,tab1カラム：増殖あり
+$sp_cols21_marginBottom: -20px;
 .bl_colUnit {
   &.bl_colUnit__cols21 {
     margin-bottom: $sp_cols21_marginBottom;
@@ -314,6 +314,23 @@ $tab_cols21_marginBottom: -20px;
         width: 48.78049%;
         margin-right: 2.43902%;
         margin-bottom: abs($tab_cols21_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// -------------------------------
+// sp2,tab1カラム：margin-bottomなし
+@include mq("tab") {
+  .bl_colUnit {
+    &__cols21_noMarginBottom {
+      > .bl_colItem {
+        width: 48.78049%;
+        margin-right: 2.43902%;
       }
       > .bl_colItem:nth-of-type(2n) {
         margin-right: 0;
