@@ -4,8 +4,8 @@ $layoutPcWidth: 992px;
 // $layoutPcWidth: 1024px;
 // ブレークポイント
 $breakpoints: (
-  "tab": "screen and (min-width: #{$layoutTabWidth})",
-  "pc": "screen and (min-width: #{$layoutPcWidth})",
+  "tab": " (min-width: #{$layoutTabWidth})",
+  "pc": " (min-width: #{$layoutPcWidth})",
 );
 // メディアクエリー
 @mixin mq($breakpoint: tab) {
@@ -13,6 +13,7 @@ $breakpoints: (
     @content;
   }
 }
+
 
 // コンテナ（SP）
 $contentsPaddingHeight_sp: 30px;
