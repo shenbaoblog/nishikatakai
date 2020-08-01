@@ -104,7 +104,6 @@
   position: fixed;
   right: 10px;
   bottom: 168px;
-  z-index: 10;
   z-index: 100;
   width: 60px;
   height: 60px;
@@ -206,7 +205,7 @@
   position: fixed;
   bottom: 88px;
   left: 0;
-  z-index: 100;
+  z-index: 110;
   transform: translateX(-100%);
   padding: 5px 10px;
   border: 2px solid $cBlack;
@@ -224,16 +223,19 @@
   }
 }
 
-
-// ナビの外枠
-.bl_drawer_aside {
+// ハンバーガーメニューの外枠
+.ly_navigation_inner {
+  display: flex;
   visibility: hidden;
+  justify-content: center;
+  align-items: flex-end;
   position: fixed;
   bottom: 68px;
-  left: calc(-100% + 90px);
-  z-index: 10;
-  width: calc(100% - 90px);
+  left: calc(-100% + 80px);
+  z-index: 100;
+  width: calc(100% - 80px);
   height: 100%;
+  padding-bottom: 78px;
   background-color: $cWhite;
   transition: $transition;
   // チェック時の挙動
@@ -241,44 +243,38 @@
     visibility: visible;
     transform: translateX(100%);
   }
-  &Inner {
-    position: absolute;
-    bottom: 78px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
-
 // ヘッダーナビゲーション（ハンバーガー内部）
-.bl_drawer_aside {
-  .bl_headerNav {
+.bl_headerNav {
+  display: flex;
+  flex-direction: column;
+  &_item {
     display: flex;
-    flex-direction: column;
-    &_item {
-      display: flex;
-      flex-grow: 1;
-      border-top: 1px solid $cGrey;
-      &:last-child {
-        border-bottom: 1px solid $cGrey;
-      }
+    flex-grow: 1;
+    border-top: 1px solid $cGrey;
+    &:last-child {
+      border-bottom: 1px solid $cGrey;
     }
-    &_link {
-      display: flex;
-      flex-grow: 1;
-      justify-content: center;
-      padding: 5px 30px;
-      color: inherit;
-      text-decoration: none;
-      &:hover {
-        color: $cOrange;
-      }
+  }
+  &_link {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 5px 30px;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: $cOrange;
     }
-    &_txt {
-      font-size: 1.25rem;
-      font-weight: bold;
-      white-space: nowrap;
-    }
+  }
+  .js_current {
+    color: $cOrange;
+  }
+  &_txt {
+    font-size: 1.25rem;
+    font-weight: bold;
+    white-space: nowrap;
   }
 }
 
@@ -287,8 +283,7 @@
   .bl_drawer_btn,
   .bl_drawer_close,
   .bl_drawer_checkbox,
-  .bl_drawer_background,
-  .bl_drawer_aside {
+  .bl_drawer_background {
     display: none;
   }
 }
@@ -296,9 +291,6 @@
 
 
 // ヘッダーナビゲーション（TAB）
-.ly_navigation {
-  display: none;
-}
 @include mq("tab") {
   .ly_navigation {
     display: block;
@@ -310,6 +302,10 @@
     background-color: $cWhite;
 
     &_inner {
+      display: block;/* ハンバーガーメニューの打ち消し */
+      visibility: visible; /* ハンバーガーメニューの打ち消し */
+      position: static; /* ハンバーガーメニューの打ち消し */
+      width: 100%; /* ハンバーガーメニューの打ち消し */
       max-width: $contentsWidth_tab;
       height: 100%;
       margin: 0 auto;
@@ -321,12 +317,17 @@
 @include mq("tab") {
   .bl_headerNav {
     display: flex;
+    flex-direction: row; /* ハンバーガーメニューの打ち消し */
     height: 100%;
 
     &_item {
       display: flex;
       flex-grow: 1;
       position: relative;
+      border: none; /* ハンバーガーメニューの打ち消し */
+      &:last-child {
+        border: none; /* ハンバーガーメニューの打ち消し */
+      }
 
       &::before {
         display: block;
@@ -366,13 +367,11 @@
         width: 100%;
       }
     }
-    .js_current {
-      color: $cOrange;
-    }
     &_txt {
       display: flex;
       align-items: center;
       position: relative;
+      font-size: $fontMd_tab; /* ハンバーガーメニューの打ち消し */
       font-weight: bold;
       line-height: 1;
       white-space: nowrap;

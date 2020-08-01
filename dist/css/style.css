@@ -652,7 +652,6 @@ body {
 }
 
 .bl_drawer_btn {
-  z-index: 10;
   z-index: 100;
   position: fixed;
   right: 10px;
@@ -767,7 +766,7 @@ body {
   -webkit-transform: translateX(-100%);
   -webkit-transition: 0.3s;
   visibility: hidden;
-  z-index: 100;
+  z-index: 110;
   position: fixed;
   bottom: 88px;
   left: 0;
@@ -790,34 +789,36 @@ body {
           transform: translateX(-50%);
 }
 
-.bl_drawer_aside {
+.ly_navigation_inner {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
   -webkit-transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   visibility: hidden;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   bottom: 68px;
-  left: calc(-100% + 90px);
-  width: calc(100% - 90px);
+  left: calc(-100% + 80px);
+          align-items: flex-end;
+          justify-content: center;
+  width: calc(100% - 80px);
   height: 100%;
+  padding-bottom: 78px;
   background-color: #fff;
   transition: 0.3s;
 }
 
-.bl_drawer_checkbox:checked ~ .bl_drawer_aside {
+.bl_drawer_checkbox:checked ~ .ly_navigation_inner {
   -webkit-transform: translateX(100%);
   visibility: visible;
           transform: translateX(100%);
 }
 
-.bl_drawer_asideInner {
-  -webkit-transform: translateX(-50%);
-  position: absolute;
-  bottom: 78px;
-  left: 50%;
-          transform: translateX(-50%);
-}
-
-.bl_drawer_aside .bl_headerNav {
+.bl_headerNav {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -827,7 +828,7 @@ body {
           flex-direction: column;
 }
 
-.bl_drawer_aside .bl_headerNav_item {
+.bl_headerNav_item {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
   display: -webkit-box;
@@ -837,11 +838,11 @@ body {
   border-top: 1px solid #c4c4c4;
 }
 
-.bl_drawer_aside .bl_headerNav_item:last-child {
+.bl_headerNav_item:last-child {
   border-bottom: 1px solid #c4c4c4;
 }
 
-.bl_drawer_aside .bl_headerNav_link {
+.bl_headerNav_link {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
   -webkit-box-pack: center;
@@ -856,18 +857,18 @@ body {
   text-decoration: none;
 }
 
-.bl_drawer_aside .bl_headerNav_link:hover {
+.bl_headerNav_link:hover {
   color: #ff993c;
 }
 
-.bl_drawer_aside .bl_headerNav_txt {
+.bl_headerNav .js_current {
+  color: #ff993c;
+}
+
+.bl_headerNav_txt {
   font-size: 1.25rem;
   font-weight: bold;
   white-space: nowrap;
-}
-
-.ly_navigation {
-  display: none;
 }
 
 .clearfix::after {
@@ -1549,8 +1550,7 @@ main > section.ly_container:last-child {
   .bl_drawer_btn,
   .bl_drawer_close,
   .bl_drawer_checkbox,
-  .bl_drawer_background,
-  .bl_drawer_aside {
+  .bl_drawer_background {
     display: none;
   }
   .ly_navigation {
@@ -1564,15 +1564,28 @@ main > section.ly_container:last-child {
             box-shadow: 0 8px 8px -8px rgba(63, 45, 45, 0.637);
   }
   .ly_navigation_inner {
+    display: block;
+    /* ハンバーガーメニューの打ち消し */
+    visibility: visible;
+    /* ハンバーガーメニューの打ち消し */
+    position: static;
+    /* ハンバーガーメニューの打ち消し */
+    width: 100%;
+    /* ハンバーガーメニューの打ち消し */
     max-width: 1220px;
     height: 100%;
     margin: 0 auto;
     padding: 0 10px;
   }
   .bl_headerNav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+            flex-direction: row;
+    /* ハンバーガーメニューの打ち消し */
     height: 100%;
   }
   .bl_headerNav_item {
@@ -1583,6 +1596,12 @@ main > section.ly_container:last-child {
     display: flex;
     position: relative;
             flex-grow: 1;
+    border: none;
+    /* ハンバーガーメニューの打ち消し */
+  }
+  .bl_headerNav_item:last-child {
+    border: none;
+    /* ハンバーガーメニューの打ち消し */
   }
   .bl_headerNav_item::before {
     -webkit-transform: translate(-50%, -50%);
@@ -1629,9 +1648,6 @@ main > section.ly_container:last-child {
     left: 0;
     width: 100%;
   }
-  .bl_headerNav .js_current {
-    color: #ff993c;
-  }
   .bl_headerNav_txt {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1640,6 +1656,8 @@ main > section.ly_container:last-child {
     display: flex;
     position: relative;
             align-items: center;
+    font-size: 1rem;
+    /* ハンバーガーメニューの打ち消し */
     font-weight: bold;
     line-height: 1;
     white-space: nowrap;
@@ -1824,4 +1842,3 @@ main > section.ly_container:last-child {
     display: block !important;
   }
 }
-/*# sourceMappingURL=style.css.map */
