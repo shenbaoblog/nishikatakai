@@ -1,11 +1,11 @@
 // ポリフィル（object-fit）
 objectFitImages();
 // ポリフィル（sticky)
-const elements = document.querySelectorAll(".ly_navigation");
-Stickyfill.add(elements);
+const ly_navigation_sticky = document.querySelectorAll(".ly_navigation");
+Stickyfill.add(ly_navigation_sticky);
 // ポリフィル（sticky)
-const elements2 = document.querySelectorAll(".ly_header");
-Stickyfill.add(elements2);
+const ly_header_sticky = document.querySelectorAll(".ly_header");
+Stickyfill.add(ly_header_sticky);
 
 // ハンバーガーメニューをクリックで閉じる
 $(function() {
