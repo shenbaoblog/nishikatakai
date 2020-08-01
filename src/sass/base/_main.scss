@@ -72,15 +72,152 @@ main {
     // padding-left: 1em;
   }
 }
+
+
+
+// -------------------------------
+// cta
+.ly_cta {
+  background-color: $cOrange;
+}
+.bl_cta {
+  max-width: $contentsWidth_tab;
+  margin: 0 auto;
+  padding: 30px $contentsPaddingWidth_tab;
+
+  $tab_fvIcon_marginBottom: -10px;
+  &_inner {
+    background-color: $cWhite;
+
+    // position: relative;
+  }
+  // メイン部
+  &_mainGroup {
+    flex-grow: 1 1 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  &_ttl {
+    margin-bottom: 10px;
+    &Img {
+      // width: 100%;
+    }
+  }
+  &_intro {
+    // margin: 0 auto;
+  }
+  // プロフィール写真部
+  &_profiles {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto 10px;
+  }
+  &_profile {
+    width: 31.707%;
+    margin-right: 2.43902%;
+    overflow: hidden;
+    &:nth-of-type(3n),
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  // 資格証明書部
+  &_profileImg {
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+  }
+  &_qualificationArea {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: $cBoxShadow;
+    background-color: rgba(255, 255, 255, .6);
+  }
+  &_qualifications {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  &_qualification {
+    width: 31.707%;
+    margin-right: 2.43902%;
+    background-color: #fff;
+    &:nth-of-type(3n),
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &_qualificationTtl {
+    line-height: 1;
+  }
+  &_icons {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $tab_fvIcon_marginBottom;
+  }
+  &_icon {
+    width: 31.707%;
+    margin-right: 2.43902%;
+    margin-bottom: abs($tab_fvIcon_marginBottom);
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: $cBoxShadow;
+    background-color: #fff;
+    &:nth-of-type(3n),
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+@include mq("tab") {
+  .bl_cta {
+    &_inner {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &_mainGroup {
+      // margin-right: 20px;
+      // margin-bottom: 0;
+    }
+    &_intro {
+      // display: flex;
+      // align-items: center;
+    }
+    &_profiles {
+      // flex-basis: 1 1 100%;
+      // margin-right: 10px;
+      // margin-bottom: 0;
+    }
+    &_icons {
+      flex-basis: 1 1 100%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+    &_icon {
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
 // -------------------------------
 // ファーストビュー（トップページ）
 .bl_firstView {
   max-width: $contentsWidth_tab;
   margin: 0 auto;
   padding: 10px $contentsPaddingWidth_tab;
-
-// アイコン部
-  // $tab_fvIcon_marginBottom: -2.43902%;
 
   $tab_fvIcon_marginBottom: -10px;
 
@@ -114,9 +251,6 @@ main {
     width: 31.707%;
     margin-right: 2.43902%;
     overflow: hidden;
-    // border-radius: 50%;
-    // background-color: #fff;
-
     &:nth-of-type(3n),
     &:last-of-type {
       margin-right: 0;
