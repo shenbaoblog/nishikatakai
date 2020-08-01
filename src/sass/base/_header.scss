@@ -223,7 +223,6 @@
   }
 }
 
-
 // ハンバーガーメニューの外枠
 .ly_navigation_inner {
   display: flex;
@@ -245,7 +244,6 @@
     transform: translateX(100%);
   }
 }
-
 
 // ヘッダーナビゲーション（ハンバーガー内部）
 .bl_headerNav {
@@ -321,8 +319,6 @@
     display: flex;
     flex-direction: row; /* ハンバーガーメニューの打ち消し */
     height: 100%;
-
-
 
     &_item {
       display: flex;
