@@ -482,28 +482,51 @@ main {
 .bl_accordion {
   position: relative;
   width: 100%;
-
-// border: 1px solid #0079c1;
   border-top: none;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid $cGrey;
   outline: 0;
   cursor: pointer;
+
+  &_title {
+    position: relative;
+    &::after {
+      display: block;
+      position: absolute;
+      top: 42%;
+      right: 25px;
+      transform: rotate(135deg);
+      width: 8px;
+      height: 8px;
+      border-top: solid 2px $cBlack;
+      border-right: solid 2px $cBlack;
+      content: "";
+      transition: all .2s ease-in-out;
+    }
+    &.open:after {
+      top: 45%;
+      transform: rotate(-45deg);
+    }
+  }
+  &_content {
+    display: none;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding: 20px;
+    background-color: $cBgGrey;
+  }
 
   .bl_accordion_title {
     display: block;
     position: relative;
     margin: 0;
-    padding: 20px 40px 20px 20px;
+    padding: 20px 50px 20px 20px;
     border-top: 1px solid $cGrey;
     font-size: 1.25em;
     font-weight: normal;
     cursor: pointer;
     transition: $transition;
 
-    &:last-of-type {
-      // border-bottom: 1px solid $cGrey;
-    }
-    &:hover {
+    &:active {
       background-color: $cOrange;
       color: $cWhite;
       &::after {
@@ -512,34 +535,22 @@ main {
     }
   }
 }
+@include mq("tab") {
+  .bl_accordion {
+    .bl_accordion_title {
+      &:hover,
+      &:focus {
+        background-color: $cOrange;
+        color: $cWhite;
+        &::after {
+          border-color: $cWhite;
+        }
+      }
+    }
+  }
+}
 
-.bl_accordion_title {
-  position: relative;
-  &::after {
-    display: block;
-    position: absolute;
-    top: 38%;
-    right: 25px;
-    transform: rotate(135deg);
-    width: 8px;
-    height: 8px;
-    border-top: solid 2px $cBlack;
-    border-right: solid 2px $cBlack;
-    content: "";
-    transition: all .2s ease-in-out;
-  }
-  &.open:after {
-    top: 45%;
-    transform: rotate(-45deg);
-  }
-}
-.bl_accordion_content {
-  display: none;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  padding: 20px;
-  background-color: $cBgGrey;
-}
+
 
 
 // -------------------------------
@@ -548,17 +559,19 @@ main {
   visibility: hidden;
   opacity: 0;
   position: fixed;
-  right: 15px;
-  bottom: 84px;
+  right: 10px;
+  bottom: 74px;
+  z-index: 10000;
   transform: translateY(20px);
   transition: $transition;
+
   &_chevron {
     display: block;
     position: relative;
     width: 48px;
     height: 48px;
     border: 4px solid $cOrange;
-    background-color: $cWhite;
+    background-color: $cOrange;
     transition: $transition;
     &::before {
       position: absolute;
@@ -570,16 +583,16 @@ main {
       width: 12px;
       height: 12px;
       margin: auto;
-      border: 4px solid $cOrange;
+      border: 4px solid $cWhite;
       border-top: none;
       border-right: none;
       content: "";
       transition: $transition;
     }
-    &:hover {
-      background-color: $cOrange;
+    &:active {
+      background-color: $cWhite;
       &::before {
-        border-color: $cWhite;
+        border-color: $cOrange;
       }
     }
   }
@@ -601,11 +614,69 @@ main {
         width: 20px;
         height: 20px;
       }
+      &:hover {
+        background-color: $cWhite;
+        &::before {
+          border-color: $cOrange;
+        }
+      }
     }
   }
 }
 
 
+// -------------------------------
+// 下タブ
+.bl_fixedFooter {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  z-index: 10000;
+  width: 100%;
+  padding: 10px;
+  box-shadow: $cBoxShadow;
+  background-color: $cWhite;
+  &_area {
+    flex: 1 1 100%;
+    margin: 0 3px;
+    padding: 10px 5px;
+
+// border-radius: 5px;
+    background-color: $cWhite;
+    text-decoration: none;
+
+    &.bl_fixedFooter_area__access {
+      border: 2px solid blue;
+      background-color: blue;
+      &:active {
+        background-color: $cWhite;
+      }
+      &:active > .bl_fixedFooter_txt {
+        color: blue;
+      }
+    }
+    &.bl_fixedFooter_area__call {
+      border: 2px solid #00c542;
+      background-color: #00c542;
+      &:active {
+        background-color: $cWhite;
+      }
+      &:active > .bl_fixedFooter_txt {
+        color: #00c542;
+      }
+    }
+  }
+  &_txt {
+    color: $cWhite;
+    text-align: center;
+  }
+}
+
+@include mq("tab") {
+  .bl_fixedFooter {
+    display: none;
+  }
+}
 
 // -------------------------------
 // 接骨院情報

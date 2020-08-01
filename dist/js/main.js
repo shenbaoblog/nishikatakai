@@ -7,7 +7,13 @@ var elements = document.querySelectorAll(".ly_navigation");
 Stickyfill.add(elements); // ポリフィル（sticky)
 
 var elements2 = document.querySelectorAll(".ly_header");
-Stickyfill.add(elements2); // トップへ戻るボタンを途中表示
+Stickyfill.add(elements2); // ハンバーガーメニューをクリックで閉じる
+
+$(function () {
+  $(".bl_drawer_aside .bl_headerNav_link").on("click", function (event) {
+    $(".bl_drawer_checkbox").prop("checked", false);
+  });
+}); // トップへ戻るボタンを途中表示
 
 jQuery(function () {
   $(window).scroll(function () {

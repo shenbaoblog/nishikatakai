@@ -7,6 +7,13 @@ Stickyfill.add(elements);
 const elements2 = document.querySelectorAll(".ly_header");
 Stickyfill.add(elements2);
 
+// ハンバーガーメニューをクリックで閉じる
+$(function() {
+  $(".bl_drawer_aside .bl_headerNav_link").on("click", function(event) {
+    $(".bl_drawer_checkbox").prop("checked", false);
+  });
+});
+
 // トップへ戻るボタンを途中表示
 jQuery(function() {
   $(window).scroll(function() {
@@ -49,7 +56,6 @@ jQuery(function() {
       current = secNum;
       // すべてのナビからcurrentクラスを削除
       $(".bl_headerNav_link").removeClass("js_current");
-
       //以下にcurrentクラス付与したい要素のid名と付与したいクラス名
       if (current == 0) {
         $("#js_id_top").addClass("js_current");

@@ -293,6 +293,7 @@ $tab_col24_marginBottom: -30px;
 // -------------------------------
 // sp2,tab1カラム：増殖あり
 $sp_cols21_marginBottom: -20px;
+$sp_cols21_marginBottomSmall: -10px;
 .bl_colUnit {
   &.bl_colUnit__cols21 {
     margin-bottom: $sp_cols21_marginBottom;
@@ -302,8 +303,18 @@ $sp_cols21_marginBottom: -20px;
       margin-bottom: abs($sp_cols21_marginBottom);
     }
   }
+  // モディファイヤ
+  &.bl_colUnit__cols21.bl_colUnit__cols21__mBS {
+    margin-bottom: $sp_cols21_marginBottomSmall;
+  }
+  &__cols21.bl_colUnit__cols21__mBS {
+    > .bl_colItem {
+      margin-bottom: abs($sp_cols21_marginBottomSmall);
+    }
+  }
 }
 $tab_cols21_marginBottom: -20px;
+$tab_cols21_marginBottomSmall: -20px;
 @include mq("tab") {
   .bl_colUnit {
     &.bl_colUnit__cols21 {
@@ -317,6 +328,15 @@ $tab_cols21_marginBottom: -20px;
       }
       > .bl_colItem:nth-of-type(2n) {
         margin-right: 0;
+      }
+    }
+    // モディファイヤ
+    &.bl_colUnit__cols21.bl_colUnit__cols21__mBS {
+      margin-bottom: $tab_cols21_marginBottomSmall;
+    }
+    &__cols21.bl_colUnit__cols21__mBS {
+      > .bl_colItem {
+        margin-bottom: abs($tab_cols21_marginBottomSmall);
       }
     }
   }
