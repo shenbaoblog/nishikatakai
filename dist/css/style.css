@@ -646,6 +646,10 @@ body {
           box-shadow: 0 0 5px #c4c4c4;
 }
 
+.bl_safari {
+  font-size: 0.75rem;
+}
+
 .ly_header {
   -webkit-box-shadow: 0 8px 8px -8px rgba(63, 45, 45, 0.637);
   z-index: 1000;
@@ -928,6 +932,10 @@ body {
   display: block;
   clear: both;
   content: "";
+}
+
+a[href*="tel:"] {
+  text-decoration: none;
 }
 
 .ly_bgImg {
@@ -1309,7 +1317,6 @@ main > section.ly_container:last-child {
 
 .bl_toTop {
   -webkit-transform: translateY(20px);
-  -webkit-box-shadow: 0 0 0 4px #fff;
   -webkit-transition: 0.3s;
   visibility: hidden;
   z-index: 10000;
@@ -1317,7 +1324,6 @@ main > section.ly_container:last-child {
   right: 10px;
   bottom: 74px;
           transform: translateY(20px);
-          box-shadow: 0 0 0 4px #fff;
   opacity: 0;
   transition: 0.3s;
 }
@@ -1328,8 +1334,8 @@ main > section.ly_container:last-child {
   position: relative;
   width: 48px;
   height: 48px;
-  border: 4px solid #ff993c;
-  background-color: #ff993c;
+  border: 4px solid #f97700;
+  background-color: #f97700;
   transition: 0.3s;
 }
 
@@ -1357,7 +1363,7 @@ main > section.ly_container:last-child {
 }
 
 .bl_toTop_chevron:active::before {
-  border-color: #ff993c;
+  border-color: #f97700;
 }
 
 .bl_toTop.js_visible {
@@ -1571,9 +1577,12 @@ main > section.ly_container:last-child {
     display: none;
   }
   .bl_cta_inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+            align-items: center;
     padding: 2.43902%;
   }
   .bl_cta_group1 {
@@ -1826,6 +1835,7 @@ main > section.ly_container:last-child {
     transition: .15s;
   }
   a[href*="tel:"] {
+    color: #333;
     pointer-events: none;
   }
   .ly_container {
@@ -1980,7 +1990,7 @@ main > section.ly_container:last-child {
     background-color: #fff;
   }
   .bl_toTop_chevron:hover::before {
-    border-color: #ff993c;
+    border-color: #f97700;
   }
   .bl_fixedFooter {
     display: none;

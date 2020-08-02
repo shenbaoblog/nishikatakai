@@ -50,6 +50,7 @@
     }
     &_inner {
       display: flex;
+      align-items: center;
       padding: 2.43902%;
     }
     &_group1 {
@@ -122,4 +123,7 @@
       margin-bottom: 20px;
     }
   }
+}
+.bl_safari {
+  font-size: $fontSm_sp;
 }

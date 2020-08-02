@@ -8,8 +8,14 @@
 
 // -------------------------------
 // タブレット以上のサイズで電話クリック無効化
+
+a[href*="tel:"] {
+  text-decoration: none;
+}
 @include mq("tab") {
   a[href*="tel:"] {
+    color: $cBlack;
+
     pointer-events: none;
   }
 }
@@ -568,7 +574,8 @@ main {
   bottom: 74px;
   z-index: 10000;
   transform: translateY(20px);
-  box-shadow: 0 0 0 4px $cWhite;
+
+// box-shadow: 0 0 0 4px $cWhite;
   transition: $transition;
 
   &_chevron {
@@ -576,8 +583,8 @@ main {
     position: relative;
     width: 48px;
     height: 48px;
-    border: 4px solid $cOrange;
-    background-color: $cOrange;
+    border: 4px solid darken($cOrange, 13%);
+    background-color: darken($cOrange, 13%);
     transition: $transition;
     &::before {
       position: absolute;
@@ -598,7 +605,7 @@ main {
     &:active {
       background-color: $cWhite;
       &::before {
-        border-color: $cOrange;
+        border-color: darken($cOrange, 13%);
       }
     }
   }
@@ -623,7 +630,7 @@ main {
       &:hover {
         background-color: $cWhite;
         &::before {
-          border-color: $cOrange;
+          border-color: darken($cOrange, 13%);
         }
       }
     }
