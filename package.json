@@ -112,8 +112,9 @@
   },
   "dependencies": {
     "intersection-observer": "^0.10.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "lodash-es": "^4.17.15",
+    "npx": "^10.2.2",
     "object-fit-images": "^3.2.4",
     "slick-carousel": "^1.8.1",
     "stickyfilljs": "^2.1.0",

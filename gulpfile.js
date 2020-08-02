@@ -512,14 +512,14 @@ gulp.task(
   gulp.series(
     "ejs",
     "sass",
-    "babel",
-    // "webpack",
+    // "babel",
+    "webpack",
     "img-min",
     gulp.parallel(
       "sass-watch",
       "ejs-watch",
-      "babel-watch",
-      // "webpack-watch",
+      // "babel-watch",
+      "webpack-watch",
       "img-watch",
       "bs-watch"
     )

@@ -26,6 +26,12 @@ module.exports = {
         test: /\.js$/, // ローダー処理の対象ファイル
         exclude: /node_modules/,
         loader: "babel-loader",
+        options: {
+          presets: [
+            // プリセットを指定することで、ES2020 を ES5 に変換
+            "@babel/preset-env",
+          ],
+        },
         //include: path.resolve(__dirname, "./src/js"), // ローダー処理の対象ディレクトリ
       },
       // sassをバンドル
@@ -46,10 +52,10 @@ module.exports = {
     //   filename: "../css/style.css", // ファイル名の設定
     // }),
     // jQuery読み込み
-    new webpack.ProvidePlugin({
-      jquery: "jquery",
-      $: "jquery",
-    }),
+    // new webpack.ProvidePlugin({
+    //   jQuery: "jquery",
+    //   $: "jquery",
+    // }),
     // autoprefixer,
     // objectFitImages,
     // clean-webpack-plugin を利用する

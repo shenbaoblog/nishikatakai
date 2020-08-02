@@ -46,10 +46,10 @@ module.exports = {
     //   filename: "../css/style.css", // ファイル名の設定
     // }),
     // jQuery読み込み
-    new webpack.ProvidePlugin({
-      jquery: "jquery",
-      $: "jquery",
-    }),
+    // new webpack.ProvidePlugin({
+    //   jQuery: "jquery",
+    //   $: "jquery",
+    // }),
     // autoprefixer,
     // objectFitImages,
     // clean-webpack-plugin を利用する
@@ -70,5 +70,5 @@ module.exports = {
     ],
   },
   // ソースマップの設定
-  //devtool: "cheap-module-eval-source-map",
+  // devtool: "cheap-module-eval-source-map",
 };

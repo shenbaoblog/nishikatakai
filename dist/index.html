@@ -11,16 +11,46 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>
-      前橋市の西片貝接骨院 | 肩こり、首こり、腰痛、頭痛、便秘等の痛み改善
-    </title>
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+
+    <!-- OGP/Twitterカード -->
+    <meta name="twitter:card" content="Summary Card with Large Image" />
+    <meta name="twitter:site" content="@nishiseko_jto" />
+    <meta property="og:url" content="https://nishikatakai-sekkotuin.com/" />
+    <meta
+      property="og:title"
+      content="肩こり、腰痛等の痛み改善なら西片貝接骨院"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="ヘッドマッサージによる頭痛改善。はり治療による便秘改善。美容鍼受け放題サービス有り。月曜～土曜10時～20時施術可（水曜は~15:00）。施術実績10,351人/10年以上"
+    />
+    <meta
+      property="og:image"
+      content="https://nishikatakai-sekkotuin.com/ogp_img.jpg"
+    />
+    <meta
+      property="og:site_name"
+      content="肩こり、首こり、腰痛、頭痛等の痛み改善西片貝接骨院"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- <meta property="fb:app_id" content="appIDを入力" /> -->
+
+    <!-- ディスクリプション -->
     <meta
       name="description"
       content="肩こり、首こり、腰痛、頭痛等の痛み改善に定評のある接骨院。ヘッドマッサージによる頭痛改善。はり治療による便秘改善。美肌効果の高い美容鍼受け放題サービス有り。月曜～土曜10時～20時施術可（水曜10時～15時）。施術実績10,351人/10年以上、国家資格保有。"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- タイトル -->
+    <title>
+      前橋市の西片貝接骨院 | 肩こり、首こり、腰痛、頭痛、便秘等の痛み改善
+    </title>
+
+    <!-- URLの正規化 -->
+    <link rel="canonical" href="https://nishikatakai-sekkotuin.com/" />
+
     <!-- ファビコン -->
     <link
       rel="apple-touch-icon"
@@ -43,22 +73,54 @@
     <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- / ファビコン -->
+
     <!-- Resource Hints設定 -->
     <!-- <link rel=”dns-prefetch” href=”//example.com”> -->
     <!-- <link rel=”preconnect” href=”//example.com”> -->
     <!-- <link rel=”prefetch” href=”//example.com/next-page.html” as=”html” crossorigin=”use-credentials”> -->
     <!-- <link rel=”prerender” href=”//example.com/next-page.html”> -->
-    <!-- / Resource Hints設定 -->
-    <!-- <script src="./js/bundle.js"></script> -->
-    <!-- <script src="./js/all.min.js"></script> -->
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="./css/style.css" />
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org/",
-        "@type": "WebPage",
-        "@id": "https://www.nishikatakai-sekkotuin.com/",
-        "name": "前橋市の西片貝接骨院 | 肩こり、首こり、腰痛、頭痛、便秘等の痛み改善",
-        "description": "肩こり、首こり、腰痛、頭痛等の痛み改善に定評のある接骨院。ヘッドマッサージによる頭痛改善。はり治療による便秘改善。美肌効果の高い美容鍼受け放題サービス有り。月曜～土曜10時～20時施術可（水曜10時～15時）。施術実績10,351人/10年以上、国家資格保有。"
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "西片貝接骨院",
+        "description": "肩こり、首こり、腰痛、頭痛等の痛み改善に定評のある接骨院。ヘッドマッサージによる頭痛改善。はり治療による便秘改善。美肌効果の高い美容鍼受け放題サービス有り。月曜～土曜10時～20時施術可（水曜10時～15時）。施術実績10,351人/10年以上、国家資格保有。",
+        "telephone": "027-212-2700", //電話番号
+        "url": "https://nishikatakai-sekkotuin.com/",
+        "priceRange": "100-10000", //平均的な予算
+        "sameAs": ["https://twitter.com/nishiseko_jto"],
+        "image": [
+          "https://nishikatakai-sekkotuin.com/img/staff_img01.jpg",
+          "https://nishikatakai-sekkotuin.com/img/treatment_img03.jpg",
+          "https://nishikatakai-sekkotuin.com/img/patient_photo_img01.jpg"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "JP",
+          "postalCode": "371-0013",
+          "addressRegion": "群馬県",
+          "addressLocality": "前橋市西片貝町",
+          "streetAddress": "4-15-5 エルドラードハイツ103"
+        },
+        "openingHoursSpecification": [
+          //営業日と営業時間
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["月曜", "火曜", "水曜", "木曜", "金曜", "土曜"],
+            "opens": "10:00", //開店時間
+            "closes": "20:00" //閉店時間
+          },
+          {
+            //定休日
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["日曜", "祝日"],
+            "opens": "00:00", //定休日のため開店時間は00:00
+            "closes": "00:00" //定休日のため閉店時間も00:00
+          }
+        ]
       }
     </script>
   </head>
@@ -3182,6 +3244,12 @@
         <!-- /.bl_cardUnit bl_cardUnit__cols21 -->
         <div class="bl_info">
           <p class="bl_info_txtWrapper">
+            <span class="bl_info_ttl">郵便番号</span>
+            <span class="bl_info_description">
+              ：371-0013
+            </span>
+          </p>
+          <p class="bl_info_txtWrapper">
             <span class="bl_info_ttl">住所</span>
             <span class="bl_info_description">
               ：前橋市西片貝町4-15-5 エルドラードハイツ103
@@ -3255,13 +3323,15 @@
     <!-- フォントオーサム -->
     <!-- <script src="./js/all.min.js"></script> -->
     <!-- jQuery -->
-    <script src="./js/jquery.min.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
     <!-- ポリフィル（object-fit） -->
-    <script src="./js/ofi.min.js"></script>
+    <!-- <script src="./js/ofi.min.js"></script> -->
     <!-- ポリフィル（sticky） -->
-    <script src="./js/stickyfill.min.js"></script>
+    <!-- <script src="./js/stickyfill.min.js"></script> -->
     <!-- メイン -->
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <!-- バンドル -->
+    <script src="./js/bundle.js"></script>
     <!-- / FOOTER -->
   </body>
 </html>
