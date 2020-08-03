@@ -33,6 +33,11 @@ a[href*="tel:"] {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@include mq("tab") {
+  .ly_noRepeatBgImg {
+    // background-position: center center;
+  }
+}
 
 // -------------------------------
 // コンテナレイアウト：標準
