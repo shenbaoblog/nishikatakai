@@ -29,7 +29,7 @@ a[href*="tel:"] {
 }
 // 背景画像：拡張パターン＿ノーリピート
 .ly_noRepeatBgImg {
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 }
