@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <p>siteNameをdefaultに合わせました。</p>
-
-    <p>urlをdefaultに合わせました。</p>
-
-    <p>ogpImgをdefaultに合わせました。</p>
-
-    <p>cssPathをdefaultに合わせました。</p>
-
     <!-- <p>サイト名　　　　　　:　 肩こり、首こり、腰痛、頭痛、便秘等の痛み改善</p>
 <p>タイトル　　　　　　:　前橋市の西片貝接骨院 </p>
 <p>ディスクリプション　:　肩こり、首こり、腰痛、頭痛等の痛み改善に定評のある接骨院。ヘッドマッサージによる頭痛改善。はり治療による便秘改善。美肌効果の高い美容鍼受け放題サービス有り。月曜～土曜10時～20時施術可（水曜10時～15時）。施術実績10,351人/10年以上、国家資格保有。</p>
@@ -22,9 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
 
-    <!-- OGP/Twitterカード -->
-    <meta name="twitter:card" content="Summary Card with Large Image" />
-    <meta name="twitter:site" content="@nishiseko_jto" />
+    <!-- OGP設定 -->
     <meta property="og:url" content="https://nishikatakai-sekkotuin.com/" />
     <meta
       property="og:title"
@@ -45,6 +35,9 @@
     />
     <meta property="og:locale" content="ja_JP" />
     <!-- <meta property="fb:app_id" content="appIDを入力" /> -->
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="Summary Card with Large Image" />
+    <meta name="twitter:site" content="@nishiseko_jto" />
 
     <!-- ディスクリプション -->
     <meta
@@ -81,6 +74,10 @@
     <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#ffffff" />
+
+    <!-- RSS/Atomフィード -->
+    <!-- <link rel="alternate" type="application/rss+xml" href="https://nishikatakai-sekkotuin.com/feed.rss" title="RSS2.0" />
+<link rel="alternate" type="application/atom+xml" href="https://nishikatakai-sekkotuin.com/feed.atom" title="Atom" /> -->
 
     <!-- Resource Hints設定 -->
     <!-- <link rel=”dns-prefetch” href=”//example.com”> -->
@@ -126,7 +123,6 @@
                 />
               </svg>
             </h1>
-            <!-- <h1 class="bl_header_mainTitle">西片貝接骨院</h1> -->
             <p class="bl_header_mainTxt">
               前橋市西片貝4-15-5エルドラードハイツ103
             </p>
@@ -151,15 +147,15 @@
       <!-- ハンバーガーメニュー -->
       <input id="id_drawer" type="checkbox" class="bl_drawer_checkbox" />
       <label for="id_drawer" class="bl_drawer_btn">
-        <div class="bl_drawer_lineWrapper">
+        <span class="bl_drawer_lineWrapper">
           <span class="bl_drawer_line"></span>
           <span class="bl_drawer_line"></span>
           <span class="bl_drawer_line"></span>
-        </div>
-        <div class="bl_drawer_btnTxtWrapper">
-          <p class="bl_drawer_btnTxt">メニュー</p>
-          <p class="bl_drawer_btnTxt">閉じる</p>
-        </div>
+        </span>
+        <span class="bl_drawer_btnTxtWrapper">
+          <span class="bl_drawer_btnTxt">メニュー</span>
+          <span class="bl_drawer_btnTxt">閉じる</span>
+        </span>
       </label>
       <label for="id_drawer" class="bl_drawer_close">閉じる</label>
       <label for="id_drawer" class="bl_drawer_background"></label>
@@ -666,6 +662,7 @@
     <!-- <script src="./js/stickyfill.min.js"></script> -->
     <!-- メイン -->
     <!-- <script src="./js/main.js"></script> -->
+
     <!-- バンドル -->
     <script src="./js/bundle.js"></script>
     <!-- / FOOTER -->

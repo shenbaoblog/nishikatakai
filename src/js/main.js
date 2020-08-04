@@ -1,7 +1,10 @@
 import "./venders/jquery.min"; // jQuery読み込み
+import "./venders/lazyload.min"; // lazyload
 import objectFitImages from "object-fit-images"; // ポリフィル（object-fit）
 import Stickyfill from "stickyfilljs"; // ポリフィル（sticky)
 
+// 画像遅延読み込み
+$("img.js_lazyLoad").lazyload();
 // ポリフィル（object-fit）
 objectFitImages();
 // ポリフィル（sticky)

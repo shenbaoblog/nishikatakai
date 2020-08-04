@@ -14,9 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
 
-    <!-- OGP/Twitterカード -->
-    <meta name="twitter:card" content="Summary Card with Large Image" />
-    <meta name="twitter:site" content="@nishiseko_jto" />
+    <!-- OGP設定 -->
     <meta property="og:url" content="https://nishikatakai-sekkotuin.com/" />
     <meta
       property="og:title"
@@ -37,6 +35,9 @@
     />
     <meta property="og:locale" content="ja_JP" />
     <!-- <meta property="fb:app_id" content="appIDを入力" /> -->
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="Summary Card with Large Image" />
+    <meta name="twitter:site" content="@nishiseko_jto" />
 
     <!-- ディスクリプション -->
     <meta
@@ -73,6 +74,10 @@
     <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#ffffff" />
+
+    <!-- RSS/Atomフィード -->
+    <!-- <link rel="alternate" type="application/rss+xml" href="https://nishikatakai-sekkotuin.com/feed.rss" title="RSS2.0" />
+<link rel="alternate" type="application/atom+xml" href="https://nishikatakai-sekkotuin.com/feed.atom" title="Atom" /> -->
 
     <!-- Resource Hints設定 -->
     <!-- <link rel=”dns-prefetch” href=”//example.com”> -->
@@ -150,7 +155,6 @@
                 />
               </svg>
             </h1>
-            <!-- <h1 class="bl_header_mainTitle">西片貝接骨院</h1> -->
             <p class="bl_header_mainTxt">
               前橋市西片貝4-15-5エルドラードハイツ103
             </p>
@@ -175,15 +179,15 @@
       <!-- ハンバーガーメニュー -->
       <input id="id_drawer" type="checkbox" class="bl_drawer_checkbox" />
       <label for="id_drawer" class="bl_drawer_btn">
-        <div class="bl_drawer_lineWrapper">
+        <span class="bl_drawer_lineWrapper">
           <span class="bl_drawer_line"></span>
           <span class="bl_drawer_line"></span>
           <span class="bl_drawer_line"></span>
-        </div>
-        <div class="bl_drawer_btnTxtWrapper">
-          <p class="bl_drawer_btnTxt">メニュー</p>
-          <p class="bl_drawer_btnTxt">閉じる</p>
-        </div>
+        </span>
+        <span class="bl_drawer_btnTxtWrapper">
+          <span class="bl_drawer_btnTxt">メニュー</span>
+          <span class="bl_drawer_btnTxt">閉じる</span>
+        </span>
       </label>
       <label for="id_drawer" class="bl_drawer_close">閉じる</label>
       <label for="id_drawer" class="bl_drawer_background"></label>
@@ -250,7 +254,7 @@
 
     <main>
       <!-- FIRST VIEW -->
-      <section
+      <div
         class="ly_noRepeatBgImg"
         style="background-image: url('./img/fv_bgimg01.jpg');"
       >
@@ -260,7 +264,7 @@
               <img
                 class="bl_firstView_ttlImg"
                 src="./img/fv_txt.png"
-                alt="施術者数10,351人以上/施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
               />
             </figure>
             <div class="bl_firstView_intro">
@@ -394,7 +398,7 @@
           <!-- / bl_firstView_icons -->
         </div>
         <!-- / bl_firstView_inner -->
-      </section>
+      </div>
       <!-- / FIRST VIEW -->
 
       <!-- 当院ではコロナウィルス対策をしっかりと行っています！ -->
@@ -453,7 +457,12 @@
           <div class="bl_colItem">
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="" src="https://placehold.jp/150x50.png" />
+                <img
+                  class="js_lazyLoad"
+                  alt="西片貝接骨院とスタッフの写真"
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x50.png"
+                />
               </figure>
             </div>
             <!-- /.bl_group1 -->
@@ -482,8 +491,10 @@
             <div class="bl_profile">
               <figure class="bl_profile_figure el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="院長：金田雄一郎（柔道整復師）の写真"
-                  src="./img/staff_img01.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/staff_img01.jpg"
                 />
               </figure>
               <p class="bl_profile_name">金田雄一郎</p>
@@ -500,8 +511,10 @@
             <div class="bl_profile">
               <figure class="bl_profile_figure el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="スタッフ：金田友美（フットケア）の写真"
-                  src="./img/staff_img02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/staff_img02.jpg"
                 />
               </figure>
               <p class="bl_profile_name">金田友美</p>
@@ -519,8 +532,10 @@
             <div class="bl_profile">
               <figure class="bl_profile_imgWrapper  el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="スタッフ：設楽和也（鍼灸師）の写真"
-                  src="./img/staff_img03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/staff_img03.jpg"
                 />
               </figure>
               <p class="bl_profile_name">設楽和也</p>
@@ -552,13 +567,20 @@
               <div class="bl_group1_ttlWrapper">
                 <p class="bl_group1_ttl">「設備も新しくキレイで安心」</p>
               </div>
-              <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="患者様の写真01" src="./img/patient_photo_img01.jpg" />
+              <figure class="bl_group1_imgWrapper el_picture56 js_lazyLoad">
+                <img
+                  class="js_lazyLoad"
+                  alt="患者様の写真01"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_photo_img01.jpg"
+                />
               </figure>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="患者様直筆の感謝の声01"
-                  src="./img/patient_voice_img01.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_voice_img01.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -576,12 +598,19 @@
                 <p class="bl_group1_ttl">「来院するたびに体が軽くなり…」</p>
               </div>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="患者様の写真02" src="./img/patient_photo_img02.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="患者様の写真02"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_photo_img02.jpg"
+                />
               </figure>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="患者様直筆の感謝の声02"
-                  src="./img/patient_voice_img02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_voice_img02.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -597,12 +626,19 @@
                 <p class="bl_group1_ttl">「痛みが5回目の治療でとれました」</p>
               </div>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="患者様の写真03" src="./img/patient_photo_img03.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="患者様の写真03"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_photo_img03.jpg"
+                />
               </figure>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="患者様直筆の感謝の声03"
-                  src="./img/patient_voice_img03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/patient_voice_img03.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -631,8 +667,10 @@
               <div class="bl_recommendVoice_imgWrapper">
                 <figure class="bl_recommendVoice_figure el_picture56">
                   <img
+                    class="js_lazyLoad"
                     alt="おさだ接骨院：長田亮院長の写真"
-                    src="./img/recommendation_photo_img01.jpg"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/recommendation_photo_img01.jpg"
                   />
                 </figure>
               </div>
@@ -656,8 +694,10 @@
               <div class="bl_recommendVoice_imgWrapper">
                 <figure class="bl_recommendVoice_figure el_picture56">
                   <img
+                    class="js_lazyLoad"
                     alt="桐生ひろさわ整骨院：石川弘樹院長の写真"
-                    src="./img/recommendation_photo_img02.jpg"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/recommendation_photo_img02.jpg"
                   />
                 </figure>
               </div>
@@ -683,8 +723,10 @@
               <div class="bl_recommendVoice_imgWrapper">
                 <figure class="bl_recommendVoice_figure el_picture56">
                   <img
+                    class="js_lazyLoad"
                     alt="こばやし鍼灸接骨院：寺内佑甫さんの写真"
-                    src="./img/recommendation_photo_img03.jpg"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/recommendation_photo_img03.jpg"
                   />
                 </figure>
               </div>
@@ -712,16 +754,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -729,8 +772,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -738,8 +782,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -747,8 +792,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -758,8 +804,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -767,8 +814,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -776,8 +824,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -785,8 +834,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -803,8 +853,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -812,8 +863,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -821,8 +873,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -834,7 +887,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -856,8 +909,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img01.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img01.png"
                     alt="腰痛、ぎっくり腰のイメージ"
                   />
                 </figure>
@@ -870,8 +924,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img02.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img02.png"
                     alt="肩こり、四十肩のイメージ"
                   />
                 </figure>
@@ -884,8 +939,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img03.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img03.png"
                     alt="首こり、むち打ちのイメージ"
                   />
                 </figure>
@@ -898,8 +954,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img04.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img04.png"
                     alt="頭痛、めまいのイメージ"
                   />
                 </figure>
@@ -919,8 +976,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img05.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img05.png"
                     alt="成長痛のイメージ"
                   />
                 </figure>
@@ -933,8 +991,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img06.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img06.png"
                     alt="脱臼、肉離れのイメージ"
                   />
                 </figure>
@@ -947,8 +1006,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img07.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img07.png"
                     alt="産後の骨盤ゆがみのイメージ"
                   />
                 </figure>
@@ -968,8 +1028,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img08.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img08.png"
                     alt="便秘のイメージ"
                   />
                 </figure>
@@ -982,8 +1043,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img09.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img09.png"
                     alt="スポーツ外傷のイメージ"
                   />
                 </figure>
@@ -996,8 +1058,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img10.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img10.png"
                     alt="猫背、姿勢改善のイメージ"
                   />
                 </figure>
@@ -1010,8 +1073,9 @@
               <div class="bl_symptoms">
                 <figure class="bl_symptoms_figure el_picture100">
                   <img
-                    class="bl_symptoms_img"
-                    src="./img/symptoms_Img11.png"
+                    class="bl_symptoms_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/symptoms_Img11.png"
                     alt="交通事故のイメージ"
                   />
                 </figure>
@@ -1041,8 +1105,9 @@
               <div class="bl_profile">
                 <figure class="bl_profile_figure el_picture56">
                   <img
-                    class="bl_profile_img"
-                    src="./img/staff_img01.jpg"
+                    class="bl_profile_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/staff_img01.jpg"
                     alt="院長：金田雄一郎（柔道整復師）の写真"
                   />
                 </figure>
@@ -1056,8 +1121,9 @@
               <div class="bl_profile">
                 <figure class="bl_profile_figure el_picture56">
                   <img
-                    class="bl_profile_img"
-                    src="./img/staff_img03.jpg"
+                    class="bl_profile_img js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/staff_img03.jpg"
                     alt="スタッフ：設楽和也（鍼灸師）の写真"
                   />
                 </figure>
@@ -1128,10 +1194,7 @@
 
       <!-- 施術風景のご紹介 -->
 
-      <section
-        id="id_treatment"
-        class="ly_container ly_container__paddingContents"
-      >
+      <section class="ly_container ly_container__paddingContents">
         <h2 class="el_h2">患者様に寄り添った施術を<br />お約束します</h2>
         <p class="el_description_txt">
           患者様が安心してご来院いただけるよう、当院の施術風景の一部をご紹介いたします。
@@ -1143,7 +1206,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">腰痛の施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="腰痛の施術イメージ" src="./img/treatment_img01.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="腰痛の施術イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img01.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 腰痛患者さんの腰回りのマッサージを行っています。
@@ -1157,8 +1225,10 @@
               <p class="bl_group1_ttl">首こりの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="首こりの施術イメージ"
-                  src="./img/treatment_img02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img02.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1173,8 +1243,10 @@
               <p class="bl_group1_ttl">五十肩の施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="五十肩の施術イメージ"
-                  src="./img/treatment_img03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img03.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1189,8 +1261,10 @@
               <p class="bl_group1_ttl">ねんざの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="ねんざの施術イメージ"
-                  src="./img/treatment_img04.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img04.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1205,8 +1279,10 @@
               <p class="bl_group1_ttl">骨盤まわりのストレッチ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="骨盤周りのストレッチイメージ"
-                  src="./img/treatment_img05.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img05.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1220,7 +1296,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">肩こりの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="肩こり施術イメージ" src="./img/treatment_img06.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="肩こり施術イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img06.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 肩こりのひどい患者様の肩周りの筋肉をほぐしています。
@@ -1234,8 +1315,10 @@
               <p class="bl_group1_ttl">ヘッドマッサージイメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1250,8 +1333,10 @@
               <p class="bl_group1_ttl">はり施術イメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1266,8 +1351,10 @@
               <p class="bl_group1_ttl">美容ばりイメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1301,8 +1388,10 @@
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper">
                 <img
+                  class="js_lazyLoad"
                   alt="骨盤ゆがみ・姿勢改善（リアライン・コア）コースのイメージ"
-                  src="./img/unlimited_course_bn01.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/unlimited_course_bn01.jpg"
                 />
               </figure>
             </div>
@@ -1313,8 +1402,10 @@
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper">
                 <img
+                  class="js_lazyLoad"
                   alt="シニア向け足腰の筋力UP（EMS）コースのイメージ"
-                  src="./img/unlimited_course_bn02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/unlimited_course_bn02.jpg"
                 />
               </figure>
             </div>
@@ -1325,8 +1416,10 @@
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper">
                 <img
+                  class="js_lazyLoad"
                   alt="美容鍼ビューティーコースのイメージ"
-                  src="./img/unlimited_course_bn03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/unlimited_course_bn03.jpg"
                 />
               </figure>
             </div>
@@ -1340,16 +1433,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -1357,8 +1451,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -1366,8 +1461,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -1375,8 +1471,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -1386,8 +1483,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -1395,8 +1493,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -1404,8 +1503,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -1413,8 +1513,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -1431,8 +1532,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -1440,8 +1542,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -1449,8 +1552,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -1462,7 +1566,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -1484,7 +1588,12 @@
           </h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
-              <img alt="営業時間表の画像" src="./img/feature_img01.jpg" />
+              <img
+                class="js_lazyLoad"
+                alt="営業時間表の画像"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img01.jpg"
+              />
             </figure>
           </div>
           <div class="bl_group2_txtWrapper">
@@ -1517,8 +1626,10 @@
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
+                class="js_lazyLoad"
                 alt="金田雄一郎院長の講演時の写真"
-                src="./img/feature_img02.jpg"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img02.jpg"
               />
             </figure>
           </div>
@@ -1546,14 +1657,20 @@
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
+                class="js_lazyLoad"
                 alt="ヘッドマッサージ、はり治療のイメージ"
-                src="./img/feature_img03.jpg"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img03.jpg"
               />
             </figure>
           </div>
           <div class="bl_group2_txtWrapper">
-            <p class="bl_group2_txt hp_cRed">
-              頭や首の筋肉が緊張すると様々な不定愁訴へと繋がる事があります。代表的なものに頭痛や眼精疲労・睡眠中の歯ぎしり・イライラなどです。それらを解消する為に心地良い刺激のマッサージを頭や首肩を施術する事により、筋緊張を緩和し、過度な神経の興奮を抑える事で症状緩和及び改善いたします。
+            <p class="bl_group2_txt">
+              頭や首の筋肉が緊張すると頭痛、眼精疲労、不眠、イライラ、だるさなど様々な症状に繋がることがあります。それらを解消するために頭や首、肩にマッサージを施すことで、筋肉をほぐし、痛みや疲労の症状を緩和いたします。
+            </p>
+            <p class="bl_group2_txt">
+              便秘の原因は、腸運動の乱れであることがほとんどです。鍼治療により、腸の働きを促進することで、便秘症状の緩和が期待できます。
+              なお、便秘の症状により、鍼治療の内容も変わりますので、施術前に詳しくお話をお聞かせください。
             </p>
           </div>
         </div>
@@ -1566,8 +1683,10 @@
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
+                class="js_lazyLoad"
                 alt="金田友美（元気で明るい女性スタッフ）の写真"
-                src="./img/feature_img04.jpg"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img04.jpg"
               />
             </figure>
           </div>
@@ -1621,7 +1740,12 @@
           </h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
-              <img alt="駐車場の写真" src="./img/feature_img06.jpg" />
+              <img
+                class="js_lazyLoad"
+                alt="駐車場の写真"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img06.jpg"
+              />
             </figure>
           </div>
           <div class="bl_group2_txtWrapper">
@@ -1646,8 +1770,10 @@
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
+                class="js_lazyLoad"
                 alt="美容鍼施術を受けているときのイメージ"
-                src="./img/feature_img07.jpg"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img07.jpg"
               />
             </figure>
           </div>
@@ -1686,8 +1812,10 @@
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
+                class="js_lazyLoad"
                 alt="院内バリアフリーの写真、車椅子完備の写真"
-                src="./img/feature_img08.jpg"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img08.jpg"
               />
             </figure>
           </div>
@@ -1707,13 +1835,18 @@
         <div class="bl_group2 clearfix">
           <h3 class="bl_group2_ttl el_h3">
             特徴9：<span class="hp_cRed">交通事故</span
-            >による怪我の治療は、よく相談して<span class="hp_cRed"
+            >による怪我の治療は、<span class="hp_cRed"
               >施術回数を一緒に決められます！</span
             >
           </h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
-              <img alt="交通事故のイメージ" src="./img/feature_img09.jpg" />
+              <img
+                class="js_lazyLoad"
+                alt="交通事故のイメージ"
+                src="./img/loading_ico.svg"
+                data-src="./img/feature_img09.jpg"
+              />
             </figure>
           </div>
           <div class="bl_group2_txtWrapper">
@@ -1728,16 +1861,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -1745,8 +1879,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -1754,8 +1889,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -1763,8 +1899,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -1774,8 +1911,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -1783,8 +1921,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -1792,8 +1931,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -1801,8 +1941,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -1819,8 +1960,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -1828,8 +1970,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -1837,8 +1980,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -1850,7 +1994,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -1872,7 +2016,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">清潔感あふれる受付</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="受付の写真" src="./img/facility_img01.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="受付の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img01.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 入口正面に構える当院の受付です。白を基調とした清潔感あふれる受付です。
@@ -1885,7 +2034,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">待合室もきれいで清潔</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="待合室の写真" src="./img/facility_img02.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="待合室の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img02.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 待合室には、お茶とちょっとしたお菓子を常備しているので、気軽につまんでいってください。
@@ -1899,8 +2053,10 @@
               <p class="bl_group1_ttl">アロマ、観葉植物のあるリラックス空間</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="観葉植物、アロマの写真"
-                  src="./img/facility_img03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img03.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1914,7 +2070,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">清潔感あふれる施術室</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="施術室の写真" src="./img/facility_img04.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="施術室の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img04.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 施術室も掃除を徹底しているのでキレイです。
@@ -1927,7 +2088,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">空気清浄機、加湿器で空気もきれい</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="空気清浄機の写真" src="./img/facility_img05.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="空気清浄機の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img05.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 空気清浄機常備で空気もキレイです。季節によっては、加湿器による湿度調節も行っています。
@@ -1941,8 +2107,10 @@
               <p class="bl_group1_ttl">サーキュレーターで院内換気</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="サーキュレーターの写真"
-                  src="./img/facility_img06.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img06.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1957,8 +2125,10 @@
               <p class="bl_group1_ttl">足腰に痛みのある方は座って靴履き</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="入り口付近にある靴を履くときに使用する椅子の写真"
-                  src="./img/facility_img07.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img07.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -1972,7 +2142,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">足腰を痛めた方用の車椅完備</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="車椅子の写真" src="./img/facility_img08.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="車椅子の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img08.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 歩けないほど重症な患者様用に車椅子も完備しております。
@@ -1986,8 +2161,10 @@
               <p class="bl_group1_ttl">トイレの流し周りも清潔</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="トイレの流し周りの写真"
-                  src="./img/facility_img09.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/facility_img09.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2016,7 +2193,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">スリッパのアルコール除菌</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="スリッパ清掃の写真" src="./img/cleaning_img01.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="スリッパ清掃の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img01.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 スリッパは、アルコール液を吹きかけるだけでなく、一足一足丁寧にふいています。
@@ -2029,7 +2211,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">窓拭きも営業日毎に欠かさず行ってます</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="窓拭きの写真" src="./img/cleaning_img02.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="窓拭きの写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img02.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 気持ちよくご来院いただけるよう、玄関の窓ガラスの清掃も欠かしません。
@@ -2042,7 +2229,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">ソファもしっかりアルコール除菌</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="ソファ清掃の写真" src="./img/cleaning_img03.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="ソファ清掃の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img03.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 患者様がお座りになるソファもアルコール液を吹きかけて、丁寧に拭いているので清潔です。
@@ -2055,7 +2247,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">トイレもアルコール除菌＆徹底掃除</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="トイレ清掃の写真" src="./img/cleaning_img04.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="トイレ清掃の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img04.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 朝と昼、1日で最低でも2回は必ず掃除をしています。急遽時間が空いたタイミングでも、ササッと掃除をしているので清潔です。
@@ -2069,8 +2266,10 @@
               <p class="bl_group1_ttl">お客様ごとにフェイスタオルを交換</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="フェイスタオル交換の写真"
-                  src="./img/cleaning_img05.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img05.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2084,7 +2283,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">肌に触れるスポンジ部の交換</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="スポンジ交換の写真" src="./img/cleaning_img06.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="スポンジ交換の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/cleaning_img06.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 肌に触れるスポンジ部分も毎日キレイなものに交換しています。
@@ -2113,8 +2317,10 @@
               <p class="bl_group1_ttl">ウォーターベッド（リラクゼーション）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="ウォーターベッドの使用イメージ"
-                  src="./img/devices_img01.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img01.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2129,8 +2335,10 @@
               <p class="bl_group1_ttl">ドクターメドマー（脚の血流改善）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="ドクターメドマーの使用イメージ"
-                  src="./img/devices_img02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img02.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2145,8 +2353,10 @@
               <p class="bl_group1_ttl">干渉波治療機（コリ、痛みの緩和）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="干渉波治療機の使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img03.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2161,8 +2371,10 @@
               <p class="bl_group1_ttl">低周波治療機（痛みの緩和）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="低周波治療機の使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img04.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2177,8 +2389,10 @@
               <p class="bl_group1_ttl">バイオトレーナー（筋力UPサポート）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="バイオトレーナーの使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img05.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2193,8 +2407,10 @@
               <p class="bl_group1_ttl">超音波治療機（痛み緩和）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="超音波治療機の使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/devices_img06.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2209,8 +2425,10 @@
               <p class="bl_group1_ttl">超音波治療機（骨形成の促進）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="超音波治療機の使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2225,8 +2443,10 @@
               <p class="bl_group1_ttl">ホットパック（筋肉、関節の痛み緩和）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="ホットパックの使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2241,8 +2461,10 @@
               <p class="bl_group1_ttl">炭酸アトマイザー（肌トラブル改善）</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt="炭酸アトマイザーの使用イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2259,16 +2481,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -2276,8 +2499,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -2285,8 +2509,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -2294,8 +2519,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -2305,8 +2531,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -2314,8 +2541,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -2323,8 +2551,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -2332,8 +2561,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -2350,8 +2580,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -2359,8 +2590,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -2368,8 +2600,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -2381,7 +2614,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -2396,12 +2629,14 @@
       >
         <h2 class="el_h2">施術の流れ</h2>
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">①来院・問診票の記入</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9312;来院・問診票の記入</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="問診票記入のイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2416,12 +2651,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">②カウンセリング</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9313;カウンセリング</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="カウンセリングのイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2433,12 +2670,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">③体の状態</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9314;体の状態</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="体の状態チェックのイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2453,12 +2692,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">④施術方針の説明・施術</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9315;施術方針の説明・施術</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="施術のイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2473,12 +2714,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">⑤施術後の検査</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9316;施術後の検査</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="施術後検査のイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2493,12 +2736,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">⑥アフターケアアドバイス</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9317;アフターケアアドバイス</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="アフターケアアドバイスのイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2513,12 +2758,14 @@
         </div>
         <!-- / .bl_group2 -->
         <div class="bl_group2 clearfix">
-          <h3 class="bl_group2_ttl el_h3">⑦次回予約</h3>
+          <h3 class="bl_group2_ttl el_h3">&#9318;次回予約</h3>
           <div class="bl_group2_imgWrapper">
             <figure class="bl_group2_figure el_picture56">
               <img
-                alt="写真：HTMLコードが写っている画面"
-                src="https://placehold.jp/150x150.png"
+                class="js_lazyLoad"
+                alt="次回予約のイメージ"
+                src="./img/loading_ico.svg"
+                data-src="https://placehold.jp/150x150.png"
               />
             </figure>
           </div>
@@ -2537,10 +2784,7 @@
 
       <!-- 施術風景のご紹介 -->
 
-      <section
-        id="id_treatment"
-        class="ly_container ly_container__paddingContents"
-      >
+      <section class="ly_container ly_container__paddingContents">
         <h2 class="el_h2">患者様に寄り添った施術を<br />お約束します</h2>
         <p class="el_description_txt">
           患者様が安心してご来院いただけるよう、当院の施術風景の一部をご紹介いたします。
@@ -2552,7 +2796,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">腰痛の施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="腰痛の施術イメージ" src="./img/treatment_img01.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="腰痛の施術イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img01.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 腰痛患者さんの腰回りのマッサージを行っています。
@@ -2566,8 +2815,10 @@
               <p class="bl_group1_ttl">首こりの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="首こりの施術イメージ"
-                  src="./img/treatment_img02.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img02.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2582,8 +2833,10 @@
               <p class="bl_group1_ttl">五十肩の施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="五十肩の施術イメージ"
-                  src="./img/treatment_img03.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img03.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2598,8 +2851,10 @@
               <p class="bl_group1_ttl">ねんざの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="ねんざの施術イメージ"
-                  src="./img/treatment_img04.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img04.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2614,8 +2869,10 @@
               <p class="bl_group1_ttl">骨盤まわりのストレッチ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="骨盤周りのストレッチイメージ"
-                  src="./img/treatment_img05.jpg"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img05.jpg"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2629,7 +2886,12 @@
             <div class="bl_group1">
               <p class="bl_group1_ttl">肩こりの施術</p>
               <figure class="bl_group1_imgWrapper el_picture56">
-                <img alt="肩こり施術イメージ" src="./img/treatment_img06.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="肩こり施術イメージ"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/treatment_img06.jpg"
+                />
               </figure>
               <p class="bl_group1_txt">
                 肩こりのひどい患者様の肩周りの筋肉をほぐしています。
@@ -2643,8 +2905,10 @@
               <p class="bl_group1_ttl">ヘッドマッサージイメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2659,8 +2923,10 @@
               <p class="bl_group1_ttl">はり施術イメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2675,8 +2941,10 @@
               <p class="bl_group1_ttl">美容ばりイメージ</p>
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
-                  alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x150.png"
+                  class="js_lazyLoad"
+                  alt=""
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x150.png"
                 />
               </figure>
               <p class="bl_group1_txt">
@@ -2862,16 +3130,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -2879,8 +3148,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -2888,8 +3158,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -2897,8 +3168,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -2908,8 +3180,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -2917,8 +3190,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -2926,8 +3200,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -2935,8 +3210,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -2953,8 +3229,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -2962,8 +3239,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -2971,8 +3249,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -2984,7 +3263,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -3038,7 +3317,6 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.9151115858417!2d139.09252231527827!3d36.387048980035715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef245995964cb%3A0x367a2ff6c060a5bd!2z6KW_54mH6LKd5o6l6aqo6Zmi!5e0!3m2!1sja!2sjp!4v1595987619897!5m2!1sja!2sjp"
                 width="600"
                 height="450"
-                frameborder="0"
                 style="border:0;"
                 allowfullscreen=""
                 aria-hidden="false"
@@ -3051,18 +3329,11 @@
           <div class="bl_colItem">
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper el_picture60">
-                <img alt="表の駐車場の写真" src="./img/parking_img01.jpg" />
-              </figure>
-            </div>
-            <!-- /.bl_group1 -->
-          </div>
-          <!-- /.bl_colItem -->
-          <div class="bl_colItem">
-            <div class="bl_group1">
-              <figure class="bl_group1_imgWrapper el_picture60">
                 <img
-                  alt="裏の駐車場への入口の写真"
-                  src="./img/parking_img02.jpg"
+                  class="js_lazyLoad"
+                  alt="表の駐車場の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/parking_img01.jpg"
                 />
               </figure>
             </div>
@@ -3072,7 +3343,26 @@
           <div class="bl_colItem">
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper el_picture60">
-                <img alt="裏の駐車場の写真" src="./img/parking_img03.jpg" />
+                <img
+                  class="js_lazyLoad"
+                  alt="裏の駐車場への入口の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/parking_img02.jpg"
+                />
+              </figure>
+            </div>
+            <!-- /.bl_group1 -->
+          </div>
+          <!-- /.bl_colItem -->
+          <div class="bl_colItem">
+            <div class="bl_group1">
+              <figure class="bl_group1_imgWrapper el_picture60">
+                <img
+                  class="js_lazyLoad"
+                  alt="裏の駐車場の写真"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/parking_img03.jpg"
+                />
               </figure>
             </div>
             <!-- /.bl_group1 -->
@@ -3124,7 +3414,12 @@
           </p>
         </div>
         <figure class="bl_group1_imgWrapper">
-          <img alt="受付時間表の画像" src="./img/reception_hours_img01.jpg" />
+          <img
+            class="js_lazyLoad"
+            alt="受付時間表の画像"
+            src="./img/loading_ico.svg"
+            data-src="./img/reception_hours_img01.jpg"
+          />
         </figure>
         <p>
           ※受付時間外でも可能な限り対応いたしますので、一度お電話ください。
@@ -3200,16 +3495,17 @@
 
       <!-- CTA -->
 
-      <section class="ly_noRepeatBgImg ly_cta">
+      <div class="ly_noRepeatBgImg ly_cta">
         <div class="bl_cta">
           <p class="bl_cta_txt">▼こちらを押すとお電話できます▼</p>
           <div class="bl_cta_inner">
             <div class="bl_cta_group1">
               <figure class="bl_cta_ttl">
                 <img
-                  class="bl_cta_ttlImg"
-                  src="./img/fv_txt.png"
-                  alt="施術者数10,351人以上/施術経験10年以上。今ある痛みを改善したい。私達にご相談ください！「肩こり、首こりからくる頭痛」「体調不良からくる便秘」の相談も歓迎いたします！"
+                  class="bl_cta_ttlImg js_lazyLoad"
+                  src="./img/loading_ico.svg"
+                  data-src="./img/fv_txt.png"
+                  alt="施術者数10,351人以上/施術経験10年以上。体の痛み改善なら当院へ「肩こりからくる頭痛」「はり施術による冷え、むくみ改善」等の相談歓迎！腰痛、首こり、猫背の姿勢改善も得意です！"
                 />
               </figure>
               <div class="bl_cta_intro">
@@ -3217,8 +3513,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img01.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img01.png"
                         alt="院長：金田雄一郎（柔道整復師）の写真"
                       />
                     </figure>
@@ -3226,8 +3523,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img02.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img02.png"
                         alt="スタッフ：金田友美（フットケア）の写真"
                       />
                     </figure>
@@ -3235,8 +3533,9 @@
                   <div class="bl_cta_profile">
                     <figure class="bl_cta_profileFigure el_picture100">
                       <img
-                        class="bl_cta_profileImg"
-                        src="./img/fv_staff_circle_img03.png"
+                        class="bl_cta_profileImg js_lazyLoad"
+                        src="./img/loading_ico.svg"
+                        data-src="./img/fv_staff_circle_img03.png"
                         alt="スタッフ：設楽和也（鍼灸師）の写真"
                       />
                     </figure>
@@ -3246,8 +3545,9 @@
                 <div class="bl_cta_qualificationArea">
                   <figure class="bl_cta_qualificationTtl">
                     <img
-                      class="bl_cta_qualificationTtlImg"
-                      src="./img/fv_license_ttl_img01.png"
+                      class="bl_cta_qualificationTtlImg js_lazyLoad"
+                      src="./img/loading_ico.svg"
+                      data-src="./img/fv_license_ttl_img01.png"
                       alt="柔道整復師、鍼灸師等の国家資格保有者在籍!!"
                     />
                   </figure>
@@ -3255,8 +3555,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img01.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img01.jpg"
                           alt="資格証（柔道整復師）の画像"
                         />
                       </figure>
@@ -3264,8 +3565,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img02.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img02.jpg"
                           alt="資格証（整体セラピスト）の画像"
                         />
                       </figure>
@@ -3273,8 +3575,9 @@
                     <div class="bl_cta_qualification">
                       <figure class="bl_cta_qualificationFigure el_picture72">
                         <img
-                          class="bl_cta_qualificationImg"
-                          src="./img/fv_license_img03.jpg"
+                          class="bl_cta_qualificationImg js_lazyLoad"
+                          src="./img/loading_ico.svg"
+                          data-src="./img/fv_license_img03.jpg"
                           alt="資格証（はり師）の画像"
                         />
                       </figure>
@@ -3291,8 +3594,9 @@
               <div class="bl_cta_symptoms">
                 <figure class="bl_cta_symptomsFigure">
                   <img
-                    class="bl_cta_symptomsImg"
-                    src="./img/cta_img1.png"
+                    class="bl_cta_symptomsImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img1.png"
                     alt="こんなお悩みございませんか？腰痛、ぎっくり腰、肩こり、首こり、むち打ち、頭痛、猫背、成長痛、交通事故、労災。まずは、一度お電話ください！"
                   />
                 </figure>
@@ -3300,8 +3604,9 @@
               <div class="bl_cta_call">
                 <figure class="bl_cta_callFigure">
                   <img
-                    class="bl_cta_callImg"
-                    src="./img/cta_img2.jpg"
+                    class="bl_cta_callImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img2.jpg"
                     alt="電話番号、受付時間の画像"
                   />
                 </figure>
@@ -3309,8 +3614,9 @@
               <div class="bl_cta_banner">
                 <figure class="bl_cta_bannerFigure">
                   <img
-                    class="bl_cta_bannerImg"
-                    src="./img/cta_img3.jpg"
+                    class="bl_cta_bannerImg js_lazyLoad"
+                    src="./img/loading_ico.svg"
+                    data-src="./img/cta_img3.jpg"
                     alt="美容鍼、骨盤ゆがみ・姿勢改善、シニア向け足腰の筋力UP受け放題コース有りの画像、"
                   />
                 </figure>
@@ -3322,7 +3628,7 @@
           <p class="bl_cta_txt">▲こちらを押すとお電話できます▲</p>
         </div>
         <!-- / bl_cta -->
-      </section>
+      </div>
       <p class="bl_safari el_indent_asterisk hp_spExist">
         上記の電話ボタンを複数回タップすると<span class="hp_bold"
           >「このWebサイトから自動的に電話をかけることは禁止されています。」</span
@@ -3332,14 +3638,18 @@
 
       <!-- スタッフ一同ご来院お待ちしております -->
       <section class="ly_container ly_container__paddingContents">
-        <h2 class="el_h2">スタッフ一同ご来院お待ちしております</h2>
+        <h2 class="el_h2">
+          西片貝接骨院とスタッフの写真<br />ご来院お待ちしております
+        </h2>
         <div class="bl_colUnit bl_colUnit__cols21_noMarginBottom">
           <div class="bl_colItem">
             <div class="bl_group1">
               <figure class="bl_group1_imgWrapper el_picture56">
                 <img
+                  class="js_lazyLoad"
                   alt="写真：HTMLコードが写っている画面"
-                  src="https://placehold.jp/150x50.png"
+                  src="./img/loading_ico.svg"
+                  data-src="https://placehold.jp/150x50.png"
                 />
               </figure>
             </div>
@@ -3446,6 +3756,7 @@
     <!-- <script src="./js/stickyfill.min.js"></script> -->
     <!-- メイン -->
     <!-- <script src="./js/main.js"></script> -->
+
     <!-- バンドル -->
     <script src="./js/bundle.js"></script>
     <!-- / FOOTER -->

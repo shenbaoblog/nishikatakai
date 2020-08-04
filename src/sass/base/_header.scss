@@ -128,6 +128,7 @@
   background-color: $cBlack;
   transition: all .5s;
   &Wrapper {
+    display: block;
     position: relative;
     width: 30px;
     height: 26px;
@@ -160,6 +161,7 @@
 
 // ボタン内テキスト
 .bl_drawer_btnTxt {
+  display: block;
   transition: $transition;
   &Wrapper {
     position: relative;
@@ -190,7 +192,7 @@
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: $cOpacityBlack;
   transition: $transition;
   // チェック時の挙動
   .bl_drawer_checkbox:checked ~ & {
@@ -337,7 +339,7 @@
         transform: translate(-50%, -50%);
         width: 1px;
         height: 35px;
-        background-color: #b8b9dc;
+        background-color: $cGrey;
         content: "";
       }
       &:last-child::after {
@@ -348,7 +350,7 @@
         transform: translate(50%,-50%);
         width: 1px;
         height: 35px;
-        background-color: #b8b9dc;
+        background-color: $cGrey;
         content: "";
       }
     }

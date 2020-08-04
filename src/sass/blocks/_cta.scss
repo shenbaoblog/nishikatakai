@@ -90,7 +90,7 @@
       margin: 0 auto;
       padding: 10px;
       box-shadow: $cBoxShadow;
-      background-color: rgba(255, 255, 255, .6);
+      background-color: $cOpacityWhite;
     }
     &_qualifications {
       display: flex;
@@ -101,7 +101,7 @@
     &_qualification {
       width: 31.707%;
       margin-right: 2.43902%;
-      background-color: #fff;
+      background-color: $cWhite;
       &:nth-of-type(3n),
       &:last-of-type {
         margin-right: 0;

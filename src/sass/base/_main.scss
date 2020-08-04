@@ -111,7 +111,7 @@ main {
     flex-grow: 1;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: $cOpacityWhite;
   }
   &_ttl {
     margin-bottom: 10px;
@@ -150,7 +150,7 @@ main {
     margin: 0 auto;
     padding: 10px;
     box-shadow: $cBoxShadow;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: $cOpacityWhite;
   }
   &_qualifications {
     display: flex;
@@ -161,7 +161,7 @@ main {
   &_qualification {
     width: 31.707%;
     margin-right: 2.43902%;
-    background-color: #fff;
+    background-color: $cWhite;
     &:nth-of-type(3n),
     &:last-of-type {
       margin-right: 0;
@@ -183,7 +183,7 @@ main {
     overflow: hidden;
     border-radius: $border-radius;
     box-shadow: $cBoxShadow;
-    background-color: #fff;
+    background-color: $cWhite;
     &:nth-of-type(3n),
     &:last-of-type {
       margin-right: 0;
@@ -437,8 +437,6 @@ main {
 // 料金
 .bl_fee {
   padding: 10px;
-
-// border: 1px solid #000;
   border-radius: $border-radius;
   box-shadow: $cBoxShadow;
 
@@ -662,25 +660,26 @@ main {
 // border-radius: 5px;
     background-color: $cWhite;
     text-decoration: none;
+    transition: $transition;
 
     &.bl_fixedFooter_area__access {
-      border: 2px solid blue;
-      background-color: blue;
+      border: 2px solid $cBlue;
+      background-color: $cBlue;
       &:active {
         background-color: $cWhite;
       }
       &:active > .bl_fixedFooter_txt {
-        color: blue;
+        color: $cBlue;
       }
     }
     &.bl_fixedFooter_area__call {
-      border: 2px solid #00c542;
-      background-color: #00c542;
+      border: 2px solid $cGreen;
+      background-color: $cGreen;
       &:active {
         background-color: $cWhite;
       }
       &:active > .bl_fixedFooter_txt {
-        color: #00c542;
+        color: $cGreen;
       }
     }
   }
