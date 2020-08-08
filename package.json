@@ -117,6 +117,7 @@
     "lodash-es": "^4.17.15",
     "npx": "^10.2.2",
     "object-fit-images": "^3.2.4",
+    "scroll-hint": "^1.2.4",
     "slick-carousel": "^1.8.1",
     "stickyfilljs": "^2.1.0",
     "whatwg-fetch": "^3.0.0"
