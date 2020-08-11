@@ -7,7 +7,7 @@ import ScrollHint from "scroll-hint"; // scroll-hint
 
 
 // 画像遅延読み込み
-$("img.js_lazyLoad").lazyload();
+$("img.js_lazyLoad").lazyload({});
 
 // ポリフィル（object-fit）
 objectFitImages();
@@ -31,6 +31,6 @@ new ScrollHint(".js_scrollable", {
 
 import "./functions/toTop"; // トップへ戻るボタンを途中表示
 import "./functions/autoCloseDrawer"; // ハンバーガーメニューをクリックで自動クローズ
-import "./functions/currentScroll"; // カレントスクロール
-import "./functions/smoothScroll"; // カレントスクロール
+// import "./functions/currentScroll"; // カレントスクロール
+import "./functions/smoothScroll"; // スムーススクロール
 import "./functions/accordion"; // アコーディオン
