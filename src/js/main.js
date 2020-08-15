@@ -30,7 +30,7 @@ new ScrollHint(".js_scrollable", {
 
 
 import "./functions/toTop"; // トップへ戻るボタンを途中表示
-import "./functions/autoCloseDrawer"; // ハンバーガーメニューをクリックで自動クローズ
-// import "./functions/currentScroll"; // カレントスクロール
+import "./functions/autoCloseDrawer"; // ドロワーをクリックで自動クローズ
+import "./functions/currentScroll"; // カレントスクロール
 import "./functions/smoothScroll"; // スムーススクロール
 import "./functions/accordion"; // アコーディオン

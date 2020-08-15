@@ -775,12 +775,7 @@ body {
   cursor: pointer;
 }
 
-.bl_drawer_btnTxt {
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-.bl_drawer_line {
+.bl_drawer_btnLine {
   -webkit-box-sizing: border-box;
   -webkit-transition: all .5s;
           box-sizing: border-box;
@@ -793,7 +788,7 @@ body {
   transition: all .5s;
 }
 
-.bl_drawer_lineWrapper {
+.bl_drawer_btnLineWrapper {
   display: block;
   position: relative;
   width: 30px;
@@ -802,30 +797,30 @@ body {
   cursor: pointer;
 }
 
-.bl_drawer_line:nth-of-type(1) {
+.bl_drawer_btnLine:nth-of-type(1) {
   top: 0;
 }
 
-.bl_drawer_line:nth-of-type(2) {
+.bl_drawer_btnLine:nth-of-type(2) {
   -webkit-transform: translateY(-50%);
   top: 50%;
           transform: translateY(-50%);
 }
 
-.bl_drawer_line:nth-of-type(3) {
+.bl_drawer_btnLine:nth-of-type(3) {
   bottom: 0;
 }
 
-.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_line:nth-of-type(1) {
+.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_btnLine:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(45deg);
           transform: translateY(12px) rotate(45deg);
 }
 
-.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_line:nth-of-type(2) {
+.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_btnLine:nth-of-type(2) {
   opacity: 0;
 }
 
-.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_line:nth-of-type(3) {
+.bl_drawer_checkbox:checked ~ .bl_drawer_btn .bl_drawer_btnLine:nth-of-type(3) {
   -webkit-transform: translateY(-12px) rotate(-45deg);
           transform: translateY(-12px) rotate(-45deg);
 }
@@ -833,10 +828,13 @@ body {
 .bl_drawer_btnTxt {
   -webkit-transition: 0.3s;
   display: block;
+  font-size: 0.75rem;
+  text-align: center;
   transition: 0.3s;
 }
 
 .bl_drawer_btnTxtWrapper {
+  display: block;
   position: relative;
   height: 18px;
   overflow: hidden;
@@ -1778,13 +1776,13 @@ main > section.ly_container:last-child {
   }
   .ly_navigation_inner {
     display: block;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     visibility: visible;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     position: static;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     width: 100%;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     max-width: 1220px;
     height: 100%;
     margin: 0 auto;
@@ -1798,7 +1796,7 @@ main > section.ly_container:last-child {
     display: -ms-flexbox;
     display: flex;
             flex-direction: row;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     height: 100%;
   }
   .bl_headerNav_item {
@@ -1810,11 +1808,11 @@ main > section.ly_container:last-child {
     position: relative;
             flex-grow: 1;
     border: none;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
   }
   .bl_headerNav_item:last-child {
     border: none;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
   }
   .bl_headerNav_item::before {
     -webkit-transform: translate(-50%, -50%);
@@ -1870,7 +1868,7 @@ main > section.ly_container:last-child {
     position: relative;
             align-items: center;
     font-size: 1rem;
-    /* ハンバーガーメニューの打ち消し */
+    /* ドロワーの打ち消し */
     font-weight: bold;
     line-height: 1;
     white-space: nowrap;

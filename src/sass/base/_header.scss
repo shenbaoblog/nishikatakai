@@ -91,141 +91,151 @@
 }
 
 // -------------------------------
-// ハンバーガーメニュー
-
-// 開閉の判定
-.bl_drawer_checkbox {
-  position: fixed;
-  left: -50vw;
-}
-
-// ドロワーボタンの外枠
-.bl_drawer_btn {
-  position: fixed;
-  right: 10px;
-  bottom: 168px;
-  z-index: 100;
-  width: 60px;
-  height: 60px;
-  padding-top: 8px;
-  border: 1px solid $cGrey;
-  background-color: $cWhite;
-  cursor: pointer;
-  &Txt {
-    font-size: $fontSm_sp;
-    text-align: center;
+// ドロワー
+.bl_drawer {
+  // ドロワー開閉の判定
+  &_checkbox {
+    position: fixed;
+    left: -50vw;
   }
-}
 
-// ドロワーボタン内の3本線
-.bl_drawer_line {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background-color: $cBlack;
-  transition: all .5s;
-  &Wrapper {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 26px;
-    margin: 0 auto 3px auto;
+  // ドロワーボタン
+  &_btn {
+    position: fixed;
+    right: 10px;
+    bottom: 168px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    padding-top: 8px;
+    border: 1px solid $cGrey;
+    background-color: $cWhite;
     cursor: pointer;
+    // ドロワーボタン内の3本線
+    &Line {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      box-sizing: border-box;
+      background-color: $cBlack;
+      transition: all .5s;
+      &Wrapper {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 26px;
+        margin: 0 auto 3px auto;
+        cursor: pointer;
+      }
+      &:nth-of-type(1) {
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+    // チェック時の挙動（ドロワーボタン内の3本線）
+    .bl_drawer_checkbox:checked ~ & {
+      .bl_drawer_btnLine:nth-of-type(1) {
+        transform: translateY(12px) rotate(45deg);
+      }
+      .bl_drawer_btnLine:nth-of-type(2) {
+        opacity: 0;
+      }
+      .bl_drawer_btnLine:nth-of-type(3) {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+    }
+    // ボタン内テキスト
+    &Txt {
+      display: block;
+      font-size: $fontSm_sp;
+      text-align: center;
+      transition: $transition;
+      &Wrapper {
+        display: block;
+        position: relative;
+        height: 18px;
+        overflow: hidden;
+      }
+      &:nth-of-type(2) {
+        visibility: hidden;
+      }
+    }
+    // チェック時の挙動（ボタン内テキスト）
+    .bl_drawer_checkbox:checked ~ & {
+      .bl_drawer_btnTxt:nth-of-type(1) {
+        visibility: hidden;
+        transform: translateY(-100%);
+      }
+      .bl_drawer_btnTxt:nth-of-type(2) {
+        visibility: visible;
+        transform: translateY(-100%);
+      }
+    }
   }
-  &:nth-of-type(1) {
-    top: 0;
-  }
-  &:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &:nth-of-type(3) {
-    bottom: 0;
-  }
-}
-// チェック時の挙動
-.bl_drawer_checkbox:checked ~ .bl_drawer_btn {
-  .bl_drawer_line:nth-of-type(1) {
-    transform: translateY(12px) rotate(45deg);
-  }
-  .bl_drawer_line:nth-of-type(2) {
+
+  // ドロワークリック時の背景
+  &_background {
+    visibility: hidden;
     opacity: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: $cOpacityBlack;
+    transition: $transition;
+    // チェック時の挙動
+    .bl_drawer_checkbox:checked ~ & {
+      visibility: visible;
+      opacity: 1;
+    }
   }
-  .bl_drawer_line:nth-of-type(3) {
-    transform: translateY(-12px) rotate(-45deg);
-  }
-}
 
-// ボタン内テキスト
-.bl_drawer_btnTxt {
-  display: block;
-  transition: $transition;
-  &Wrapper {
-    position: relative;
-    height: 18px;
-    overflow: hidden;
-  }
-  &:nth-of-type(2) {
+  // ドロワーの閉じるボタン
+  &_close {
     visibility: hidden;
-  }
-}
-// チェック時の挙動
-.bl_drawer_checkbox:checked ~ .bl_drawer_btn {
-  .bl_drawer_btnTxt:nth-of-type(1) {
-    visibility: hidden;
-    transform: translateY(-100%);
-  }
-  .bl_drawer_btnTxt:nth-of-type(2) {
-    visibility: visible;
-    transform: translateY(-100%);
-  }
-}
-
-// 背景
-.bl_drawer_background {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background-color: $cOpacityBlack;
-  transition: $transition;
-  // チェック時の挙動
-  .bl_drawer_checkbox:checked ~ & {
-    visibility: visible;
-    opacity: 1;
+    position: fixed;
+    bottom: 88px;
+    left: 0;
+    z-index: 110;
+    transform: translateX(-100%);
+    padding: 5px 10px;
+    border: 2px solid $cBlack;
+    background-color: $cWhite;
+    cursor: pointer;
+    transition: $transition;
+    &:active {
+      background-color: $cGrey;
+    }
+    // チェック時の挙動
+    .bl_drawer_checkbox:checked ~ & {
+      visibility: visible;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
-// 閉じるボタン
-.bl_drawer_close {
-  visibility: hidden;
-  position: fixed;
-  bottom: 88px;
-  left: 0;
-  z-index: 110;
-  transform: translateX(-100%);
-  padding: 5px 10px;
-  border: 2px solid $cBlack;
-  background-color: $cWhite;
-  cursor: pointer;
-  transition: $transition;
-  &:active {
-    background-color: $cGrey;
-  }
-  // チェック時の挙動
-  .bl_drawer_checkbox:checked ~ & {
-    visibility: visible;
-    left: 50%;
-    transform: translateX(-50%);
+// ドロワーに関する挙動はSPでのみ表示
+@include mq("tab") {
+  .bl_drawer_btn,
+  .bl_drawer_close,
+  .bl_drawer_checkbox,
+  .bl_drawer_background {
+    display: none;
   }
 }
 
-// ハンバーガーメニューの外枠
+
+
+// ドロワーの外枠調整
 .ly_navigation_inner {
   display: flex;
   visibility: hidden;
@@ -246,8 +256,31 @@
     transform: translateX(100%);
   }
 }
+@include mq("tab") {
+  .ly_navigation {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 64px;
+    box-shadow: $cHeaderBoxShadow;
+    background-color: $cWhite;
 
-// ヘッダーナビゲーション（ハンバーガー内部）
+    &_inner {
+      display: block;/* ドロワーの打ち消し */
+      visibility: visible; /* ドロワーの打ち消し */
+      position: static; /* ドロワーの打ち消し */
+      width: 100%; /* ドロワーの打ち消し */
+      max-width: $contentsWidth_tab;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 $contentsPaddingWidth_tab;
+    }
+  }
+}
+
+
+// ヘッダーナビゲーション（ドロワー内部）
 .bl_headerNav {
   display: flex;
   flex-direction: column;
@@ -279,56 +312,19 @@
     white-space: nowrap;
   }
 }
-
-// SPでのみ表示
-@include mq("tab") {
-  .bl_drawer_btn,
-  .bl_drawer_close,
-  .bl_drawer_checkbox,
-  .bl_drawer_background {
-    display: none;
-  }
-}
-
-
-
-// ヘッダーナビゲーション（TAB）
-@include mq("tab") {
-  .ly_navigation {
-    display: block;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 64px;
-    box-shadow: $cHeaderBoxShadow;
-    background-color: $cWhite;
-
-    &_inner {
-      display: block;/* ハンバーガーメニューの打ち消し */
-      visibility: visible; /* ハンバーガーメニューの打ち消し */
-      position: static; /* ハンバーガーメニューの打ち消し */
-      width: 100%; /* ハンバーガーメニューの打ち消し */
-      max-width: $contentsWidth_tab;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0 $contentsPaddingWidth_tab;
-    }
-  }
-}
-// 内部
 @include mq("tab") {
   .bl_headerNav {
     display: flex;
-    flex-direction: row; /* ハンバーガーメニューの打ち消し */
+    flex-direction: row; /* ドロワーの打ち消し */
     height: 100%;
 
     &_item {
       display: flex;
       flex-grow: 1;
       position: relative;
-      border: none; /* ハンバーガーメニューの打ち消し */
+      border: none; /* ドロワーの打ち消し */
       &:last-child {
-        border: none; /* ハンバーガーメニューの打ち消し */
+        border: none; /* ドロワーの打ち消し */
       }
 
       &::before {
@@ -373,7 +369,7 @@
       display: flex;
       align-items: center;
       position: relative;
-      font-size: $fontMd_tab; /* ハンバーガーメニューの打ち消し */
+      font-size: $fontMd_tab; /* ドロワーの打ち消し */
       font-weight: bold;
       line-height: 1;
       white-space: nowrap;
