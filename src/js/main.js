@@ -4,8 +4,6 @@ import objectFitImages from "object-fit-images"; // ポリフィル（object-fit
 import Stickyfill from "stickyfilljs"; // ポリフィル（sticky)
 import ScrollHint from "scroll-hint"; // scroll-hint
 
-
-
 // 画像遅延読み込み
 $("img.js_lazyLoad").lazyload({});
 
@@ -21,13 +19,12 @@ const ly_header_sticky = document.querySelectorAll(".ly_header");
 Stickyfill.add(ly_header_sticky);
 
 // 横スクロール
-new ScrollHint(".js_scrollable", {
+new ScrollHint(".js_sideScroll", {
   suggestiveShadow: true,
   i18n: {
     scrollable: "横スクロール可能",
   },
 });
-
 
 import "./functions/toTop"; // トップへ戻るボタンを途中表示
 import "./functions/autoCloseDrawer"; // ドロワーをクリックで自動クローズ
