@@ -1347,6 +1347,14 @@ main > section.ly_container:last-child {
   background-color: #f8f8f8;
 }
 
+.bl_accordion_txt {
+  margin-bottom: 10px;
+}
+
+.bl_accordion_txt:last-child {
+  margin-bottom: 0;
+}
+
 .bl_accordion .bl_accordion_title {
   -webkit-transition: 0.3s;
   display: block;
@@ -2139,4 +2147,3 @@ main > section.ly_container:last-child {
     display: block !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

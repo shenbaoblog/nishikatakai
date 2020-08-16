@@ -34,9 +34,6 @@ a[href*="tel:"] {
   background-repeat: no-repeat;
 }
 @include mq("tab") {
-  .ly_noRepeatBgImg {
-    // background-position: center center;
-  }
 }
 
 // -------------------------------
@@ -87,9 +84,6 @@ main {
   &:last-child {
     margin-bottom: 0;
   }
-  .bl_li {
-    // padding-left: 1em;
-  }
 }
 
 
@@ -115,13 +109,8 @@ main {
   }
   &_ttl {
     margin-bottom: 10px;
-    &Img {
-      // width: 100%;
-    }
   }
-  &_intro {
-    // margin: 0 auto;
-  }
+
   // プロフィール写真部
   &_profiles {
     display: flex;
@@ -299,11 +288,6 @@ main {
 // -------------------------------
 // 説明Block
 .bl_group1 {
-  &_ttlWrapper {
-    // display: flex;
-    // align-items: flex-end;
-    // height: 48px;
-  }
   &_ttl {
     font-size: $fontLg_sp;
     font-weight: bold;
@@ -314,9 +298,6 @@ main {
 }
 @include mq("tab") {
   .bl_group1 {
-    &_ttlWrapper {
-      // height: 60px;
-    }
     &_ttl {
       font-size: $fontLg_tab;
       vertical-align: bottom;
@@ -527,6 +508,12 @@ main {
     margin-left: 40px;
     padding: 20px;
     background-color: $cBgGrey;
+  }
+  &_txt {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .bl_accordion_title {
