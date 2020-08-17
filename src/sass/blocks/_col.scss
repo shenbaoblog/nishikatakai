@@ -50,21 +50,54 @@ $tab_col23_marginBottom: -40px;
   }
 }
 
+
 // -------------------------------
-// SP横スクロールPC3カラム
-// $sp_col23_marginBottom: -10px;
+// 横スクロール,SP1カラム,PC2カラム
 .bl_colUnit {
-  &.bl_colUnit__col3Scroll {
-    // margin-bottom: $sp_col23_marginBottom;
+  &.bl_colUnit__colScroll12 {
     flex-wrap: nowrap;
     overflow-x: auto;
   }
-  &__col3Scroll {
+  &__colScroll12 {
     > .bl_colItem {
       min-width: 48.78049%;
       margin-right: 2.43902%;
-      // margin-bottom: abs($sp_col23_marginBottom);
-      // &:nth-of-type(2n),
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__colScroll12 {
+      display: block;
+      overflow: hidden;
+      // overflow: hidden;
+    }
+    &__colScroll12 {
+      > .bl_colItem {
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// -------------------------------
+// 横スクロール,SP2カラム,PC3カラム
+.bl_colUnit {
+  &.bl_colUnit__colScroll23 {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  &__colScroll23 {
+    > .bl_colItem {
+      min-width: 48.78049%;
+      margin-right: 2.43902%;
       &:last-of-type {
         margin-right: 0;
       }
@@ -74,56 +107,11 @@ $tab_col23_marginBottom: -40px;
 // $tab_col23_marginBottom: -40px;
 @include mq("tab") {
   .bl_colUnit {
-    &.bl_colUnit__col3Scroll {
-      // margin-bottom: $tab_col23_marginBottom;
-      // overflow-x: initial;
-    }
-    &__col3Scroll {
+    &__colScroll23 {
       > .bl_colItem {
         min-width: 31.707%;
-        margin-right: 2.43902%;
-        // margin-bottom: abs($tab_col23_marginBottom);
-        // &:nth-of-type(2n) {
-        //   margin-right: 2.43902%;
-        // }
-        // &:nth-of-type(3n),
-        // &:last-of-type {
-        //   margin-right: 0;
-        // }
-      }
-    }
-  }
-}
-
-
-// -------------------------------
-// SP横スクロールPC2カラム
-.bl_colUnit {
-  &.bl_colUnit__col2Scroll {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  &__col2Scroll {
-    > .bl_colItem {
-      min-width: 48.78049%;
-      margin-right: 2.43902%;
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-  }
-}
-@include mq("tab") {
-  .bl_colUnit {
-    &.bl_colUnit__col2Scroll {
-      display: block;
-      overflow: hidden;
-    }
-    &__col2Scroll {
-      > .bl_colItem {
-        margin-bottom: 20px;
-        &:last-child {
-          margin-bottom: 0;
+        &:last-of-type {
+          margin-right: 0;
         }
       }
     }
@@ -131,44 +119,7 @@ $tab_col23_marginBottom: -40px;
 }
 
 
-
-
-
-
-
-
-// 2カラム
-$sp_col2_marginBottom: -20px;
-.bl_colUnit {
-  &.bl_colUnit__col2 {
-    margin-bottom: $sp_col2_marginBottom;
-  }
-  &__col2 {
-    > .bl_colItem {
-      margin-bottom: abs($sp_col2_marginBottom);
-    }
-  }
-}
-$tab_col2_marginBottom: -30px;
-@include mq("tab") {
-  .bl_colUnit {
-    &.bl_colUnit__col2 {
-      margin-bottom: $tab_col2_marginBottom;
-    }
-    &__col2 {
-      > .bl_colItem {
-        width: 48.78049%;
-        margin-right: 2.43902%;
-        margin-bottom: abs($tab_col2_marginBottom);
-      }
-      > .bl_colItem:nth-of-type(2n) {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-
+// -------------------------------
 // 3カラム
 $sp_col3_marginBottom: -20px;
 .bl_colUnit {
@@ -189,67 +140,8 @@ $sp_col3_marginBottom: -20px;
     }
   }
 }
-$tab_col3_marginBottom: -30px;
-@include mq("tab") {
-  // .bl_colUnit {
-  //   &.bl_colUnit__col3 {
-  //     margin-bottom: $tab_col3_marginBottom;
-  //   }
-  //   &__col3 {
-  //     > .bl_colItem {
-  //       width: 31.707%;
-  //       margin-right: 2.43902%;
-  //       margin-bottom: abs($tab_col3_marginBottom);
-  //     }
-  //     > .bl_colItem:nth-of-type(3n) {
-  //       margin-right: 0;
-  //     }
-  //   }
-  // }
-}
 
-
-
-
-
-
-// 4カラム
-$sp_col4_marginBottom: -20px;
-.bl_colUnit {
-  &.bl_colUnit__col4 {
-    margin-bottom: $sp_col4_marginBottom;
-  }
-  &__col4 {
-    > .bl_colItem {
-      width: 23.78%;
-      margin-right: 1.62602%;
-      margin-bottom: abs($sp_col4_marginBottom);
-    }
-    > .bl_colItem:nth-of-type(4n) {
-      margin-right: 0;
-    }
-  }
-}
-// $tab_col4_marginBottom: -30px;
-// @include mq("tab") {
-//   .bl_colUnit {
-//     &.bl_colUnit__col4 {
-//       margin-bottom: $tab_col4_marginBottom;
-//     }
-//     &__col4 {
-//       > .bl_colItem {
-//         width: 23.78%;
-//         margin-right: 1.62602%;
-//         margin-bottom: abs($tab_col4_marginBottom);
-//       }
-//       > .bl_colItem:nth-of-type(4n) {
-//         margin-right: 0;
-//       }
-//     }
-//   }
-// }
-
-
+// -------------------------------
 // sp2,tab4カラム
 $sp_col24_marginBottom: -20px;
 .bl_colUnit {
@@ -291,70 +183,109 @@ $tab_col24_marginBottom: -30px;
 
 
 // -------------------------------
-// sp2,tab1カラム：増殖あり
-$sp_cols21_marginBottom: -20px;
-$sp_cols21_marginBottomSmall: -10px;
+// sp1,tab2カラム：増殖あり
+$sp_cols12_marginBottom: -20px;
+// モディファイア用：margin-bottom-small
+$sp_cols12_marginBottomSmall: -10px;
+// モディファイア用：no-margin-bottom
+$sp_cols12_noMarginBottom: 0;
 .bl_colUnit {
-  &.bl_colUnit__cols21 {
-    margin-bottom: $sp_cols21_marginBottom;
+  &.bl_colUnit__cols12 {
+    margin-bottom: $sp_cols12_marginBottom;
   }
-  &__cols21 {
+  &__cols12 {
     > .bl_colItem {
-      margin-bottom: abs($sp_cols21_marginBottom);
+      margin-bottom: abs($sp_cols12_marginBottom);
     }
   }
-  // モディファイヤ
-  &.bl_colUnit__cols21.bl_colUnit__cols21__mBS {
-    margin-bottom: $sp_cols21_marginBottomSmall;
+
+
+  // -------------------------------
+  // モディファイヤ：margin-bottom-small
+  &.bl_colUnit__cols12MarginBottomSmall {
+    margin-bottom: $sp_cols12_marginBottomSmall;
   }
-  &__cols21.bl_colUnit__cols21__mBS {
+  &__cols12MarginBottomSmall {
     > .bl_colItem {
-      margin-bottom: abs($sp_cols21_marginBottomSmall);
+      margin-bottom: abs($sp_cols12_marginBottomSmall);
     }
   }
+  // / モディファイヤ：margin-bottom-small
+  // -------------------------------
+
+
+  // -------------------------------
+  // モディファイヤ：no-margin-bottom
+  &.bl_colUnit__cols12NoMarginBottom {
+    margin-bottom: $sp_cols12_noMarginBottom;
+  }
+  &__cols12NoMarginBottom {
+    > .bl_colItem {
+      margin-bottom: abs($sp_cols12_noMarginBottom);
+    }
+  }
+  // / モディファイヤ：no-margin-bottom
+  // -------------------------------
 }
-$tab_cols21_marginBottom: -20px;
-$tab_cols21_marginBottomSmall: -20px;
+
+// メディアクエリ：tabの時
+$tab_cols12_marginBottom: -20px;
+// モディファイア用：margin-bottom-small
+$tab_cols12_marginBottomSmall: -20px;
+// モディファイア用：no-margin-bottom
+$tab_cols12_noMarginBottom: 0;
 @include mq("tab") {
   .bl_colUnit {
-    &.bl_colUnit__cols21 {
-      margin-bottom: $tab_cols21_marginBottom;
+    &.bl_colUnit__cols12 {
+      margin-bottom: $tab_cols12_marginBottom;
     }
-    &__cols21 {
+    &__cols12 {
       > .bl_colItem {
         width: 48.78049%;
         margin-right: 2.43902%;
-        margin-bottom: abs($tab_cols21_marginBottom);
+        margin-bottom: abs($tab_cols12_marginBottom);
       }
       > .bl_colItem:nth-of-type(2n) {
         margin-right: 0;
       }
     }
-    // モディファイヤ
-    &.bl_colUnit__cols21.bl_colUnit__cols21__mBS {
-      margin-bottom: $tab_cols21_marginBottomSmall;
-    }
-    &__cols21.bl_colUnit__cols21__mBS {
-      > .bl_colItem {
-        margin-bottom: abs($tab_cols21_marginBottomSmall);
-      }
-    }
-  }
-}
 
 
-// -------------------------------
-// sp2,tab1カラム：margin-bottomなし
-@include mq("tab") {
-  .bl_colUnit {
-    &__cols21_noMarginBottom {
+    // -------------------------------
+    // モディファイヤ：margin-bottom-small
+    &.bl_colUnit__cols12MarginBottomSmall {
+      margin-bottom: $tab_cols12_marginBottomSmall;
+    }
+    &__cols12MarginBottomSmall {
       > .bl_colItem {
         width: 48.78049%;
         margin-right: 2.43902%;
+        margin-bottom: abs($tab_cols12_marginBottomSmall);
       }
       > .bl_colItem:nth-of-type(2n) {
         margin-right: 0;
       }
     }
+    // / モディファイヤ：margin-bottom-small
+    // -------------------------------
+
+
+    // -------------------------------
+    // モディファイア：no-margin-bottom
+    &.bl_colUnit__cols12NoMarginBottom {
+      margin-bottom: $tab_cols12_noMarginBottom;
+    }
+    &__cols12NoMarginBottom {
+      > .bl_colItem {
+        width: 48.78049%;
+        margin-right: 2.43902%;
+        margin-bottom: abs($tab_cols12_noMarginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+    // / モディファイア：no-margin-bottom
+    // -------------------------------
   }
 }
