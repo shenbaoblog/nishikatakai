@@ -407,6 +407,44 @@ body {
   content: "※";
 }
 
+.el_picture05 {
+  position: relative;
+  padding-top: 5%;
+  overflow: hidden;
+}
+
+.el_picture05 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture11 {
+  position: relative;
+  padding-top: 11%;
+  overflow: hidden;
+}
+
+.el_picture11 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
 .el_picture10 {
   position: relative;
   padding-top: 10%;
@@ -414,6 +452,101 @@ body {
 }
 
 .el_picture10 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture20 {
+  position: relative;
+  padding-top: 20%;
+  overflow: hidden;
+}
+
+.el_picture20 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture26_5 {
+  position: relative;
+  padding-top: 26.5%;
+  overflow: hidden;
+}
+
+.el_picture26_5 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture33 {
+  position: relative;
+  padding-top: 33%;
+  overflow: hidden;
+}
+
+.el_picture33 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture34 {
+  position: relative;
+  padding-top: 33%;
+  overflow: hidden;
+}
+
+.el_picture34 > img {
+  -webkit-transform: translateY(-50%);
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+     object-fit: cover;
+     object-position: center center;
+          transform: translateY(-50%);
+     font-family: "object-fit:cover;object-position:center center";
+}
+
+.el_picture38_5 {
+  position: relative;
+  padding-top: 38.5%;
+  overflow: hidden;
+}
+
+.el_picture38_5 > img {
   -webkit-transform: translateY(-50%);
   -o-object-fit: cover;
   -o-object-position: center center;
@@ -1071,7 +1204,9 @@ main > section.ly_container:last-child {
 }
 
 .bl_firstView_qualificationArea {
+  -ms-flex-preferred-size: 97%;
   -webkit-box-shadow: 0 0 5px #c4c4c4;
+      flex-basis: 97%;
   width: 85%;
   margin: 0 auto;
   padding: 10px;
@@ -1998,18 +2133,18 @@ main > section.ly_container:last-child {
   .bl_firstView_profiles {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 0;
   }
   .bl_firstView_icons {
-    -ms-flex-preferred-size: 200px;
+    -ms-flex-preferred-size: 17%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
     -ms-flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        flex-basis: 200px;
+        flex-basis: 17%;
             flex-direction: column;
         flex-wrap: nowrap;
             justify-content: space-between;
@@ -2133,4 +2268,3 @@ main > section.ly_container:last-child {
     display: block !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

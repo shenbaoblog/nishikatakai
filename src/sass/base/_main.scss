@@ -15,7 +15,6 @@ a[href*="tel:"] {
 @include mq("tab") {
   a[href*="tel:"] {
     color: $cBlack;
-
     pointer-events: none;
   }
 }
@@ -75,7 +74,6 @@ main {
   }
 }
 
-
 // 共通
 .bl_ul {
   list-style: disc;
@@ -85,8 +83,6 @@ main {
     margin-bottom: 0;
   }
 }
-
-
 
 // -------------------------------
 // ファーストビュー（トップページ）
@@ -130,11 +126,11 @@ main {
   // 資格証明書部
   &_profileImg {
     height: 100%;
-
     object-fit: cover;
     object-position: center center;
   }
   &_qualificationArea {
+    flex-basis: 97%;
     width: 85%;
     margin: 0 auto;
     padding: 10px;
@@ -145,7 +141,6 @@ main {
     display: flex;
     justify-content: center;
   }
-
 
   &_qualification {
     width: 31.707%;
@@ -194,11 +189,11 @@ main {
     }
     &_profiles {
       flex-basis: 100%;
-      margin-right: 10px;
+      margin-right: 15px;
       margin-bottom: 0;
     }
     &_icons {
-      flex-basis: 200px;
+      flex-basis: 17%;
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -211,7 +206,6 @@ main {
     }
   }
 }
-
 
 // -------------------------------
 // プロフィール（スタッフ紹介）
@@ -283,8 +277,6 @@ main {
   }
 }
 
-
-
 // -------------------------------
 // 説明Block
 .bl_group1 {
@@ -343,7 +335,6 @@ main {
   }
 }
 
-
 // -------------------------------
 // 治療（まずは、一度お電話ください）
 .bl_treatment {
@@ -384,7 +375,6 @@ main {
     }
   }
 }
-
 
 // -------------------------------
 // 当院の特徴/施術の流れ
@@ -551,9 +541,6 @@ main {
   }
 }
 
-
-
-
 // -------------------------------
 // トップページへ戻る
 .bl_toTop {
@@ -626,7 +613,6 @@ main {
     }
   }
 }
-
 
 // -------------------------------
 // 下タブ
@@ -702,7 +688,6 @@ main {
   }
 }
 
-
 .bl_fixedFooter_iconPhone {
   display: block;
   position: relative;
@@ -728,16 +713,10 @@ main {
     border-top-left-radius: 1px;
     border-bottom-right-radius: 1px;
     border-bottom-left-radius: 12px;
-    background: linear-gradient(
-    to left,
-    currentColor 10px,
-    transparent 0
-    ) no-repeat right 11px/6px 4px,
-    linear-gradient(
-    to left,
-    currentColor 10px,
-    transparent 0
-    ) no-repeat -1px 0/4px 6px;
+    background: linear-gradient(to left, currentColor 10px, transparent 0)
+    no-repeat right 11px/6px 4px,
+    linear-gradient(to left, currentColor 10px, transparent 0) no-repeat -1px 0/4px
+    6px;
   }
   &::before {
     bottom: 0;
@@ -750,10 +729,8 @@ main {
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-radius: 50%;
-    ;
   }
 }
-
 
 @include mq("tab") {
   .bl_fixedFooter {
